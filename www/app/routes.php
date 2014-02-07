@@ -15,3 +15,16 @@ Route::get('/', function()
 {
 	return View::make('hello');
 });
+
+Route::get('/user/login', function() {
+    return "<form method=POST>email: <input type='text' name='email'><br>Password: <input type='password' name='password'><br><input type='submit'>";
+});
+
+Route::post('/user/login', function() {
+   if (Auth::attempt(array('email' => Input::get('email'), 'password' => Input::get('password'))))
+    {
+        return Redirect::intended('admin');
+    }
+    
+    return 'could not login';
+});

@@ -4,7 +4,10 @@
 	"keywords": ["framework", "laravel"],
 	"license": "MIT",
 	"require": {
-		"laravel/framework": "4.1.*"
+		"laravel/framework": "4.1.*",
+        "barryvdh/laravel-debugbar": "1.*",
+        "fbf/laravel-blog": "dev-master",
+        "frozennode/administrator": "dev-master"
 	},
 	"autoload": {
 		"classmap": [
@@ -23,7 +26,9 @@
 		],
 		"post-update-cmd": [
 			"php artisan clear-compiled",
-			"php artisan optimize"
+			"php artisan optimize",
+            "php artisan migrate",
+            "php artisan db:seed",
 		],
 		"post-create-project-cmd": [
 			"php artisan key:generate"
@@ -32,5 +37,5 @@
 	"config": {
 		"preferred-install": "dist"
 	},
-	"minimum-stability": "stable"
+	"minimum-stability": "dev"
 }

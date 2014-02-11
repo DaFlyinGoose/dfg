@@ -39,7 +39,7 @@ return array(
 		),
 		'id' => array(
 			'title' => 'Settings',
-			'output' => "<form method=POST action='/admin/emails/results'>" . Form::token() . "<input type='hidden' name='filters[0][field_name]' value='group_id'><input type='hidden' name='filters[0][field_value]' value='(:value)'><input type='submit'></form>",
+			'output' => "<a href='/admin/emails?group=(:value)'><button>test</button></a>",
 		),
 	),
 

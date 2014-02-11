@@ -75,8 +75,6 @@ return array(
 		'email' => array(
 			'title' => 'Email',
 		),
-		'group_id' => array(
-		),
 	),
 
 	/**
@@ -104,5 +102,13 @@ return array(
 		'field' => 'updated_at',
 		'direction' => 'desc',
 	),
+	
+	'query_filter' => function($query) {
+		$group = Input::get('group', false);
+		if ($group !== false)
+		{
+			$query->where('group_id', $group);
+		}
+	},
 
 );

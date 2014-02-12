@@ -51,7 +51,14 @@ return array(
 	 * 		'Analytics' => array('E-Commerce' => 'page.ecommerce.analytics'),
 	 *	)
 	 */
-	'menu' => array('posts', 'groups', 'emails'),
+	'menu' => array(
+		'posts',
+		'groups',
+		'emails',
+		'newsletters',
+		'articles',
+		'forwards',
+	),
 
 	/**
 	 * The permission option is the highest-level authentication check that lets you define a closure that should return true if the current user

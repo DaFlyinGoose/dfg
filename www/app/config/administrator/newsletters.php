@@ -49,7 +49,7 @@ return array(
 		/*'email_groups' => array(
 			'title' => "Email Groups",
 			'relationship' => 'emailGroups', //this is the name of the Eloquent relationship method!
-			'select' => "(:table).name",
+			'select' => "SUM(SELECT COUNT(id) FROM emails WHERE group_id=(:table).id)",
 		)*/
 	),
 
@@ -125,9 +125,10 @@ return array(
 				'error' => 'There was an error whilst sending the newsletter',
 			),
 			//the settings data is passed to the function and saved if a truthy response is returned
-			'action' => function(&$data)
+			'action' => function($data)
 			{
-				
+                //dd($data);
+				with(new \Service\Newsletter())->sendNewsletter($data);
 
 				return true;
 			}

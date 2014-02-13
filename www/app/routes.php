@@ -16,6 +16,11 @@ Route::get('/', function()
 	return View::make('hello');
 });
 
+Route::get('test', function() {
+    with(new \Services\Newsletter)->sendNewsletter(Newsletter::find(1));
+    return 'test';
+});
+
 Route::get('/user/login', function() {
     return "<form method=POST>email: <input type='text' name='email'><br>Password: <input type='password' name='password'><br><input type='submit'>";
 });

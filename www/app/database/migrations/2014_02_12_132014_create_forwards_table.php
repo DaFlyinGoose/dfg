@@ -15,7 +15,8 @@ class CreateForwardsTable extends Migration {
 		Schema::create('forwards', function($table)
         {
             $table->increments('id');
-            $table->string('string');
+            $table->string('forward');
+            $table->string('url');
             $table->string('email_id');
             $table->timestamps();
         });

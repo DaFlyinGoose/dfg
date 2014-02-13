@@ -24,11 +24,20 @@ $app = new Illuminate\Foundation\Application;
 |
 */
 
-$env = $app->detectEnvironment(array(
-
-	'local' => array('your-machine-name'),
-
-));
+$env = $app->detectEnvironment(function() {
+    switch($_SERVER['HTTP_HOST'])
+    {
+        case 'dfg.local':
+            return 'local';
+            break;
+        case 'staging.dfg.gd':
+            return 'staging';
+            break;
+        default:
+            return 'production';
+            break;
+    }
+});
 
 /*
 |--------------------------------------------------------------------------

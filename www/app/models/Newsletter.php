@@ -13,6 +13,20 @@ class Newsletter extends Eloquent
 	{
 		return $this->belongsToMany('EmailGroups');
 	}
+    
+    public function groupArticles()
+    {
+        $articles = $this->articles()->get();
+        $groupedArticles = array();
+        
+        foreach ($articles as $article)
+        {
+            $groupedArticles[strtolower($article->group)] = $article;
+        }
+        
+        return $groupedArticles;
+    }
+    
 	/*
 	public function emailCount()
 	{

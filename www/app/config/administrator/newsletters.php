@@ -38,6 +38,19 @@ return array(
 		'send_at' => array(
 			'title' => 'Sent'
 		),
+		'articles' => array(
+			'title' => 'Articles',
+			'relationship' => 'articles',
+			'select' => "COUNT((:table).id)",
+		),		
+		'emailCount' => array(
+			'title' => 'Going To',
+		),		
+		/*'email_groups' => array(
+			'title' => "Email Groups",
+			'relationship' => 'emailGroups', //this is the name of the Eloquent relationship method!
+			'select' => "(:table).name",
+		)*/
 	),
 
 	/**
@@ -61,6 +74,11 @@ return array(
 		'send_at' => array(
 			'title' => 'Send At',
 			'type' => 'datetime',
+		),
+		'emailGroups' => array(
+			'title' => 'Email Groups',
+			'type' => 'relationship',
+			'name_field' => 'name',
 		),
 	),
 
@@ -97,5 +115,23 @@ return array(
 		'direction' => 'desc',
 	),
 	
+	'actions' => array(
+		//Clearing the site cache
+		'send' => array(
+			'title' => 'Send NewsLetter',
+			'messages' => array(
+				'active' => 'Sending Newsletter...',
+				'success' => 'Newsletter sent!',
+				'error' => 'There was an error whilst sending the newsletter',
+			),
+			//the settings data is passed to the function and saved if a truthy response is returned
+			'action' => function(&$data)
+			{
+				
+
+				return true;
+			}
+		),
+	),
 
 );

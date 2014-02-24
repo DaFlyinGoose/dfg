@@ -2,3 +2,4 @@
 /public/uploads
 # Except this file
 !.gitignore
+/app/config/database.php

@@ -21,7 +21,7 @@ class Newsletter extends Eloquent
 		
         foreach ($articles as $key => $article)
         {
-            $groupedArticles[strtolower($article->group)][$key] = $article;
+            $groupedArticles[$article->group][$key] = $article;
         }
         
         return $groupedArticles;

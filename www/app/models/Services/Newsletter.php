@@ -23,7 +23,7 @@ class Newsletter
 					}
                 }
 				
-                \Mail::send('emails.newsletter', array('articleForwards' => $articleForwards), function($message) use ($email, &$newsletter)
+                \Mail::send('emails.newsletter', array('articleForwards' => $articleForwards, 'newsletter' => $newsletter), function($message) use ($email, &$newsletter)
                 {
                     $message->to($email->email, $email->name)->subject($newsletter->subject);
                 });

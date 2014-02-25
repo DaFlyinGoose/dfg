@@ -4,7 +4,7 @@ use \Eloquent;
 
 class Newsletter
 {
-    public function sendNewsletter(Eloquent $newsletter)
+    public function sendNewsletter($newsletter)
     {
         $articleGroup = $newsletter->groupArticles();
         

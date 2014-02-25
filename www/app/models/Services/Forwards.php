@@ -8,7 +8,7 @@ class Forwards
 			->first();
 	}
 	
-	public function logForward(\Eloquent $forward)
+	public function logForward($forward)
 	{		
 		$hit = new \ForwardHit();
 		$hit->forward_id = $forward->id;

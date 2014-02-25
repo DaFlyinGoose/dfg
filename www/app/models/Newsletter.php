@@ -18,10 +18,10 @@ class Newsletter extends Eloquent
     {
         $articles = $this->articles()->get();
         $groupedArticles = array();
-        
-        foreach ($articles as $article)
+		
+        foreach ($articles as $key => $article)
         {
-            $groupedArticles[strtolower($article->group)] = $article;
+            $groupedArticles[strtolower($article->group)][$key] = $article;
         }
         
         return $groupedArticles;

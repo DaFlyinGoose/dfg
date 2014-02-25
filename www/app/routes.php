@@ -33,3 +33,16 @@ Route::post('/user/login', function() {
     
     return 'could not login';
 });
+
+Route::any('{all}', function($forward)
+{
+	$forwardService = new \Services\Forwards();
+	$forward = $forwardService->findForward($forward);
+	if ($forward) {
+		$forwardService->logForward($forward);
+
+		return Redirect::to($forward->url);
+	}
+	
+	return Redirect::to('/');
+})->where('all', '.*');

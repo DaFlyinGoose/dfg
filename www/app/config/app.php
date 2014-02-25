@@ -109,6 +109,7 @@ return array(
         'Frozennode\Administrator\AdministratorServiceProvider',
         'Fbf\LaravelBlog\LaravelBlogServiceProvider',
         'Barryvdh\Debugbar\ServiceProvider',
+		'hisorange\browserdetect\Providers\BrowserDetectServiceProvider',
 
 	),
 
@@ -175,6 +176,7 @@ return array(
 		'URL'             => 'Illuminate\Support\Facades\URL',
 		'Validator'       => 'Illuminate\Support\Facades\Validator',
 		'View'            => 'Illuminate\Support\Facades\View',
+		'BrowserDetect' => 'hisorange\browserdetect\Facades\BrowserDetect',
 
 	),
 

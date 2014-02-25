@@ -6,7 +6,7 @@ class Newsletter
 {
     public function sendNewsletter(Eloquent $newsletter)
     {
-        $articles = $newsletter->groupArticles();
+        $articleGroup = $newsletter->groupArticles();
         
         $emailGroups = $newsletter->emailGroups()->get();
         
@@ -16,12 +16,14 @@ class Newsletter
             foreach ($emailGroup->emails()->get() as $email)
             {
                 $articleForwards = array();
-                foreach ($articles as $key => $article)
+                foreach ($articleGroup as $group => $articles)
                 {
-                    $articleForwards[$key] = array('forward' => $this->createForward($article, $email), 'article' => $article);
+					foreach ($articles as $key => $article) {
+						$articleForwards[$group][$key] = array('forward' => $this->createForward($article, $email), 'article' => $article);
+					}
                 }
-                
-                \Mail::send('emails.newsletter', $articleForwards, function($message) use ($email, &$newsletter)
+				
+                \Mail::send('emails.newsletter', array('articleForwards' => $articleForwards), function($message) use ($email, &$newsletter)
                 {
                     $message->to($email->email, $email->name)->subject($newsletter->subject);
                 });

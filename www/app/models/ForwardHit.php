@@ -6,4 +6,9 @@ class ForwardHit extends Eloquent
     
     protected $fillable = array('forward_id', 'ip', 'referrer', 'browser', 'os');
 	
+	public function forward()
+	{
+		return $this->belongsTo('Forward');
+	}
+	
 }

@@ -7,21 +7,21 @@ return array(
 	 *
 	 * @type string
 	 */
-	'title' => 'Email Addresses',
+	'title' => 'Users',
 
 	/**
 	 * The singular name of your model
 	 *
 	 * @type string
 	 */
-	'single' => 'emails',
+	'single' => 'users',
 
 	/**
 	 * The class name of the Eloquent model that this config represents
 	 *
 	 * @type string
 	 */
-	'model' => 'Email',
+	'model' => 'User',
 
 	/**
 	 * The columns array
@@ -29,25 +29,18 @@ return array(
 	 * @type array
 	 */
 	'columns' => array(
-		'name' => array(
-			'title' => 'Name'
+		'id' => array(
+			'title' => 'ID'
 		),
 		'email' => array(
 			'title' => 'Email'
 		),
-		'group' => array(
-			'title' => 'Email Group',
-			'relationship' => 'group',
-			'select' => "(:table).name",
+		'name' => array(
+			'title' => 'Name',
 		),
-		'views' => array(
-			'title' => 'Article Views',
-			'select' => 'id',
-			'output' => function($value)
-			{
-				return count(with(new \Services\Forwards())->getForwardsByEmail($value));
-			}
-		)
+		'created_at' => array(
+			'title' => 'Created',
+		),
 	),
 
 	/**
@@ -64,10 +57,9 @@ return array(
 			'title' => 'Email',
 			'type' => 'text',
 		),
-		'group' => array(
-			'type' => 'relationship',
-			'title' => 'Email Group',
-			'name_field' => 'name',
+		'password' => array(
+			'type' => 'password',
+			'title' => 'Password'
 		),
 	),
 

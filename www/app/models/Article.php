@@ -8,4 +8,9 @@ class Article extends Eloquent
 	{
 		return $this->belongsTo('Newsletter');
 	}
+	
+	public function forwards()
+	{
+		return $this->hasMany('Forward');
+	}
 }

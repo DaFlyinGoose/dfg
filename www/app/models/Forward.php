@@ -10,4 +10,14 @@ class Forward extends Eloquent
 	{
 		return $this->belongsTo('Email');
 	}
+	
+	public function article()
+	{
+		return $this->belongsTo('Article');
+	}
+	
+	public function forwardHits()
+	{
+		return $this->hasMany('ForwardHit');
+	}
 }

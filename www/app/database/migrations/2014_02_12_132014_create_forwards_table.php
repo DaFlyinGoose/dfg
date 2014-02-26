@@ -18,6 +18,7 @@ class CreateForwardsTable extends Migration {
             $table->string('forward');
             $table->string('url');
             $table->string('email_id');
+            $table->integer('article_id');
             $table->timestamps();
         });
 	}

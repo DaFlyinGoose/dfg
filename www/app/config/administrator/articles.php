@@ -40,6 +40,14 @@ return array(
 			'relationship' => 'newsletter',
 			'select' => "LEFT((:table).send_at, 10)",
 		),
+		'views' => array(
+			'title' => 'Views',
+			'select' => 'id',
+			'output' => function($value)
+			{
+				return count(with(new \Services\Forwards())->getForwardsByArticle($value));
+			}
+		)
 	),
 
 	/**

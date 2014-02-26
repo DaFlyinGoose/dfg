@@ -53,6 +53,7 @@ return array(
 	 */
 	'menu' => array(
 		'posts',
+		'users',
 		'groups',
 		'emails',
 		'newsletters',

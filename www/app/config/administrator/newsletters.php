@@ -45,12 +45,15 @@ return array(
 		),		
 		'emailCount' => array(
 			'title' => 'Going To',
-		),		
-		/*'email_groups' => array(
-			'title' => "Email Groups",
-			'relationship' => 'emailGroups', //this is the name of the Eloquent relationship method!
-			'select' => "SUM(SELECT COUNT(id) FROM emails WHERE group_id=(:table).id)",
-		)*/
+		),	
+		'views' => array(
+			'title' => 'Article Views',
+			'select' => 'id',
+			'output' => function($value)
+			{
+				return count(with(new \Services\Forwards())->getForwardsByNewsletter($value));
+			}
+		)
 	),
 
 	/**
@@ -118,7 +121,7 @@ return array(
 	'actions' => array(
 		//Clearing the site cache
 		'send' => array(
-			'title' => 'Send NewsLetter',
+			'title' => 'Send Newsletter',
 			'messages' => array(
 				'active' => 'Sending Newsletter...',
 				'success' => 'Newsletter sent!',
@@ -128,7 +131,7 @@ return array(
 			'action' => function($data)
 			{
                 //dd($data);
-				with(new \Service\Newsletter())->sendNewsletter($data);
+				with(new \Services\Newsletter())->sendNewsletter($data);
 
 				return true;
 			}

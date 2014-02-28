@@ -32,6 +32,9 @@ return array(
 		'id' => array(
 			'title' => 'ID'
 		),
+		'subject' => array(
+			'title' => 'Subject',
+		),
 		'created_at' => array(
 			'title' => 'Created'
 		),
@@ -45,6 +48,25 @@ return array(
 		),		
 		'emailCount' => array(
 			'title' => 'Going To',
+			'select' => 'id', 
+			'output' => function($value)
+			{
+				return 0;
+				$count = 0;
+				$groups = Newsletter::find($value)
+					->emailGroups();
+				if($value == 2)
+				dd($groups);
+				foreach ($groups as $group)
+				{
+					foreach($group->emails() as $email)
+					{
+						$count++;
+					}
+				}
+				
+				return $count;
+			},
 		),	
 		'views' => array(
 			'title' => 'Article Views',

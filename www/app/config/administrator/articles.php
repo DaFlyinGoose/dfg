@@ -47,6 +47,14 @@ return array(
 			{
 				return count(with(new \Services\Forwards())->getForwardsByArticle($value));
 			}
+		),
+		'options' => array(
+			'title' => 'Options',
+			'select' => 'url',
+			'output' => function($value) 
+			{
+				return "<a href='" . $value . "' target='_blank'>View</a>";
+			}
 		)
 	),
 

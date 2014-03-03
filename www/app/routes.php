@@ -13,7 +13,7 @@
 
 Route::get('/', function()
 {
-	return View::make('hello');
+	return Response::view('site.index');
 });
 
 Route::get('/user/login', function() {

@@ -1,0 +1,7 @@
+/* the only mixin i need */
+@mixin copy-weight() {
+  font-weight: 200;
+  @media #{$medium-up} {
+    font-weight: 100;
+  }
+}

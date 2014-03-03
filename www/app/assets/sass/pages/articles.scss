@@ -1,0 +1,30 @@
+// settings/colours/fonts etc
+@import "../site/settings";
+@import "../foundation/settings";
+
+// This is really fucking annoying
+// Because the foundation framework has a global scss
+// file that dumps additional meta data into the css
+// and does all the basic application of styles without the
+// ability to disable it on a individual file level
+// because it assumes there will only be one stylesheet (i guess)
+// we need to add a variable to each of these files
+// to stop it adding SOME (yes not all) of those styles
+// it will still add meta vars for the responsive viewports
+// which we need to do our media query conditional styling below
+$include-html-global-classes: false;
+
+// rem-calc etc
+@import "../../bower_components/foundation/scss/foundation/components/global";
+@import "../../bower_components/foundation/scss/foundation/functions";
+
+/* page specific styles */
+
+.wrapper {
+  background: #eeeeee;
+}
+
+.wrapper__inner {
+  background: #fff;
+  padding-top: 20px;
+}

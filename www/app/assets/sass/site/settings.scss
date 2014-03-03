@@ -1,0 +1,24 @@
+/**
+ * Site settings
+ */
+
+/* colours */
+
+$white: white;
+$lightGrey: #ccc;
+$greyCopy: #180a0a;
+
+/* fonts */
+
+$roboto: "Roboto";
+$robotoSlab: "Roboto Slab";
+
+$fontHelvetica: "Helvetica";
+// $fontHelveticaNeue: "Helvetica Neue";
+$fontArial: "Arial";
+$fontSansSerif: "Sans-serif";
+
+/* font groups */
+
+$primaryFont: unquote(unquote($robotoSlab) + "," + unquote($fontHelvetica) + "," + unquote($fontArial) + "," + unquote($fontSansSerif));
+$secondaryFont: unquote(unquote($roboto) + "," + unquote($fontHelvetica) + "," + unquote($fontArial) + "," + unquote($fontSansSerif));

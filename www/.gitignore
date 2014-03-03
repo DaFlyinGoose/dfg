@@ -3,3 +3,10 @@
 # Except this file
 !.gitignore
 /app/config/database.php
+/app/assets/bower_components
+/public/css
+/public/js
+/public/images
+/public/vendor
+/public/lib
+node_modules

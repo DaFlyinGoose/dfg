@@ -142,7 +142,23 @@ return array(
 	
 	'actions' => array(
 		//Clearing the site cache
-		'send' => array(
+		'test' => array(
+            'title' => 'Test Newsletter',
+            'messages' => array(
+                'active' => 'Sending Newsletter to you...',
+                'success' => 'Newsletter sent!',
+                'error' => 'There was an error whilst sending the newsletter',
+            ),
+            //the settings data is passed to the function and saved if a truthy response is returned
+            'action' => function($data)
+            {
+                //dd($data);
+                with(new \Services\Newsletter())->emailNewsletter($data, $data->groupArticles(), Auth::user());
+
+                return true;
+            }
+        ),
+        'send' => array(
 			'title' => 'Send Newsletter',
 			'messages' => array(
 				'active' => 'Sending Newsletter...',

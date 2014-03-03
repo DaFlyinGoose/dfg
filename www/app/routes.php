@@ -16,11 +16,6 @@ Route::get('/', function()
 	return View::make('hello');
 });
 
-Route::get('test', function() {
-    with(new \Services\Newsletter)->sendNewsletter(Newsletter::find(1));
-    return 'test';
-});
-
 Route::get('/user/login', function() {
 	if (Auth::check())
 	{
@@ -38,6 +33,19 @@ Route::post('/user/login', function() {
     
     return 'could not login';
 });
+
+Route::post('/admin/order/save', array('before' => 'auth', function() {
+    $groups = Input::get('order', array());
+    
+    foreach ($groups as $place => $group) 
+    {
+        $group = Group::find($group);
+        $group->order = ($place + 1);
+        $group->save();
+    }
+    
+    return 'success';
+}));
 
 Route::any('{all}', function($forward)
 {

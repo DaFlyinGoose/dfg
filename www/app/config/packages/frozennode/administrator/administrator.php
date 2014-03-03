@@ -56,7 +56,7 @@ return array(
 		'users',
 		'groups',
 		'emails',
-		'newsletters',
+		'Newsletters' => array('newsletters', 'Order' => 'page.site.admin.order'),
 		'articles',
 		'forwards',
 	),

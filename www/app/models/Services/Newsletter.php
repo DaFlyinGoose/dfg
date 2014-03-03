@@ -15,20 +15,25 @@ class Newsletter
         {
             foreach ($emailGroup->emails()->get() as $email)
             {
-                $articleForwards = array();
-                foreach ($articleGroup as $group => $articles)
-                {
-					foreach ($articles as $key => $article) {
-						$articleForwards[$group][$key] = array('forward' => $this->createForward($article, $email), 'article' => $article);
-					}
-                }
-				
-                \Mail::send('emails.newsletter', array('articleForwards' => $articleForwards, 'newsletter' => $newsletter), function($message) use ($email, &$newsletter)
-                {
-                    $message->to($email->email, $email->name)->subject($newsletter->subject);
-                });
+                $this->emailNewsletter($newsletter, $articleGroup, $email);
             }
         }
+    }
+    
+    public function emailNewsletter($newsletter, $articleGroup, $email)
+    {
+        $articleForwards = array();
+        foreach ($articleGroup as $group => $articles)
+        {
+            foreach ($articles as $key => $article) {
+                $articleForwards[$group][$key] = array('forward' => $this->createForward($article, $email), 'article' => $article);
+            }
+        }
+        
+        \Mail::send('emails.newsletter', array('articleForwards' => $articleForwards, 'newsletter' => $newsletter), function($message) use ($email, &$newsletter)
+        {
+            $message->to($email->email, $email->name)->subject($newsletter->subject);
+        });
     }
     
     protected function createForward($article, $email)

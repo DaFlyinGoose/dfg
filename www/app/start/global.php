@@ -1,5 +1,8 @@
 <?php
-
+function aw( $statement )
+{
+    return  '{{' . $statement . '}}';
+}
 /*
 |--------------------------------------------------------------------------
 | Register The Laravel Class Loader

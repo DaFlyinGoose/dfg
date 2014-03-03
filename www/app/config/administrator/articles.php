@@ -33,7 +33,9 @@ return array(
 			'title' => 'Title'
 		),
 		'group' => array(
-			'title' => 'Group'
+			'title' => 'Group',
+            'relationship' => 'group',
+            'select' => '`group`',
 		),
 		'newsletter' => array(
 			'title' => 'Newsletter',
@@ -73,8 +75,9 @@ return array(
 			'type' => 'text',
 		),
 		'group' => array(
-			'title' => 'Group',
-			'type' => 'text',
+            'type' => 'relationship',
+            'title' => 'Group',
+			'name_field' => 'group',
 		),
 		'description' => array(
 			'title' => 'Description',

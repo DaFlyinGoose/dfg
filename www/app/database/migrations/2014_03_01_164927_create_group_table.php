@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateArticleTable extends Migration {
+class CreateGroupTable extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,14 +12,11 @@ class CreateArticleTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('articles', function($table)
+        Schema::create('groups', function($table)
         {
             $table->increments('id');
-            $table->string('title');
-            $table->string('url');
-            $table->text('description');
-            $table->integer('group_id');
-            $table->integer('newsletter_id');
+            $table->string('group');
+            $table->integer('order');
             $table->timestamps();
         });
 	}

@@ -56,7 +56,7 @@ console.log("starting tasks");
 // Task for sass using libsass through gulp-sass
 gulp.task('sass-vendor', function() {
   gulp.src(paths.src.sass_vendor)
-  .pipe(sass({sourceComments:'map'}))
+  .pipe(sass({sourceComments:'normal'}))
   .pipe(prefix("last 1 version", "> 1%", "ie 8", "ie 9"))
   .pipe(concat('bundle.vendor.css'))
   .pipe(minifyCSS())
@@ -67,7 +67,7 @@ gulp.task('sass-vendor', function() {
 // Task for sass using libsass through gulp-sass
 gulp.task('sass-site', function() {
   gulp.src(paths.src.sass_bundle)
-  .pipe(sass({sourceComments:'map'}))
+  .pipe(sass({sourceComments:'normal'}))
   .pipe(prefix("last 1 version", "> 1%", "ie 8", "ie 9"))
   .pipe(concat('bundle.site.css'))
   .pipe(minifyCSS())
@@ -78,7 +78,7 @@ gulp.task('sass-site', function() {
 // Task for sass using libsass through gulp-sass
 gulp.task('sass-pages', function() {
   gulp.src(paths.src.sass_pages)
-  .pipe(sass({sourceComments:'map'}))
+  .pipe(sass({sourceComments:'normal'}))
   .pipe(prefix("last 1 version", "> 1%", "ie 8", "ie 9"))
   .pipe(minifyCSS())
   .pipe(gulp.dest(paths.build.css + '/pages'))

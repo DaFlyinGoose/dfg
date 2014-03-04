@@ -1,4 +1,6 @@
-<?php 
+<?php namespace Entities;
+
+use \Eloquent;
 
 class Newsletter extends Eloquent
 {
@@ -6,12 +8,12 @@ class Newsletter extends Eloquent
 	
 	public function articles() 
 	{		
-		return $this->hasMany('Article');
+		return $this->hasMany('\Entities\Article');
 	}
 	
 	public function emailGroups()
 	{
-		return $this->belongsToMany('EmailGroups');
+		return $this->belongsToMany('\Entities\EmailGroups');
 	}
     
     public function groupArticles()

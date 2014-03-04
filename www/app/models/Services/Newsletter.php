@@ -1,6 +1,7 @@
 <?php namespace Services;
 
 use \Eloquent;
+use \Mail;
 
 class Newsletter
 {
@@ -30,7 +31,7 @@ class Newsletter
             }
         }
         
-        \Mail::send('emails.newsletter', array('articleForwards' => $articleForwards, 'newsletter' => $newsletter), function($message) use ($email, &$newsletter)
+        Mail::send('emails.newsletter', array('articleForwards' => $articleForwards, 'newsletter' => $newsletter), function($message) use ($email, &$newsletter)
         {
             $message->to($email->email, $email->name)->subject($newsletter->subject);
         });

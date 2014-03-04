@@ -1,4 +1,6 @@
-<?php 
+<?php namespace Entities;
+
+use \Eloquent;
 
 class Group extends Eloquent
 {
@@ -6,6 +8,6 @@ class Group extends Eloquent
 	
 	public function articles()
     {
-        return $this->hasMany('Article');
+        return $this->hasMany('\Entities\Article');
     }
 }

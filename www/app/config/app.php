@@ -108,7 +108,6 @@ return array(
 		'Illuminate\Workbench\WorkbenchServiceProvider',
         'Frozennode\Administrator\AdministratorServiceProvider',
         'Fbf\LaravelBlog\LaravelBlogServiceProvider',
-        'Barryvdh\Debugbar\ServiceProvider',
 		'hisorange\browserdetect\Providers\BrowserDetectServiceProvider',
 
 	),

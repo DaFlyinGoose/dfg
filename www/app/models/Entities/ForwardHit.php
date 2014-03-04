@@ -1,4 +1,6 @@
-<?php 
+<?php namespace Entities;
+
+use \Eloquent;
 
 class ForwardHit extends Eloquent
 {
@@ -8,7 +10,7 @@ class ForwardHit extends Eloquent
 	
 	public function forward()
 	{
-		return $this->belongsTo('Forward');
+		return $this->belongsTo('\Entities\Forward');
 	}
 	
 }

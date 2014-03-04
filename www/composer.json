@@ -10,6 +10,10 @@
             "frozennode/administrator": "dev-master",
             "hisorange/browser-detect": "dev-master"
 	},
+	"require-dev": {
+            "barryvdh/laravel-debugbar": "1.*",
+            "php-console/laravel-service-provider": "1.*"
+	},
 	"autoload": {
 		"classmap": [
 			"app/commands",

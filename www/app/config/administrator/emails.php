@@ -21,7 +21,7 @@ return array(
 	 *
 	 * @type string
 	 */
-	'model' => 'Email',
+	'model' => '\Entities\Email',
 
 	/**
 	 * The columns array

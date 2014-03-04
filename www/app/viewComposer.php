@@ -16,6 +16,6 @@ View::composer(array('administrator::layouts.default'), function($view)
 });
 
 View::composer(array('site.admin.order'), function($view) { 
-    $view->with('groups', Group::all());
+    $view->with('groups', \Entities\Group::all());
 });
 ?>

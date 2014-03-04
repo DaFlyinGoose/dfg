@@ -1,10 +1,11 @@
 <?php namespace Services;
 
 use \Request;
-use \Forward;
-use \Article;
-use \ForwardHit;
 use \BrowserDetect;
+
+use \Entities\Forward;
+use \Entities\Article;
+use \Entities\ForwardHit;
 
 class Forwards
 {

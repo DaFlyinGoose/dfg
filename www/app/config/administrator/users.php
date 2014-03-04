@@ -21,7 +21,7 @@ return array(
 	 *
 	 * @type string
 	 */
-	'model' => 'User',
+	'model' => '\Entities\User',
 
 	/**
 	 * The columns array

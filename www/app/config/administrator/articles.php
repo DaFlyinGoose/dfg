@@ -21,7 +21,7 @@ return array(
 	 *
 	 * @type string
 	 */
-	'model' => 'Article',
+	'model' => '\Entities\Article',
 
 	/**
 	 * The columns array

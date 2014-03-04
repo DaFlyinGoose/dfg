@@ -1,4 +1,6 @@
-<?php 
+<?php namespace Entities;
+
+use \Eloquent;
 
 class Forward extends Eloquent
 {
@@ -8,16 +10,16 @@ class Forward extends Eloquent
 	
 	public function email() 
 	{
-		return $this->belongsTo('Email');
+		return $this->belongsTo('\EntitiesEmail');
 	}
 	
 	public function article()
 	{
-		return $this->belongsTo('Article');
+		return $this->belongsTo('\Entities\Article');
 	}
 	
 	public function forwardHits()
 	{
-		return $this->hasMany('ForwardHit');
+		return $this->hasMany('\Entities\ForwardHit');
 	}
 }

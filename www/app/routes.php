@@ -13,7 +13,10 @@
 
 Route::get('/', function()
 {
-	return Response::view('site.index');
+	$posts = Fbf\LaravelBlog\Post::orderBy('id', 'DESC')
+		->take('3')
+		->get();
+	return Response::view('site.index', array('posts' => $posts));
 });
 
 Route::get('/user/login', function() {
@@ -22,7 +25,7 @@ Route::get('/user/login', function() {
 		return Redirect::to('/admin');
 	}
 	
-    return "<form method=POST>email: <input type='text' name='email'><br>Password: <input type='password' name='password'><br><input type='submit'>";
+    return View::make('site.login');
 });
 
 Route::post('/user/login', function() {
@@ -39,7 +42,7 @@ Route::post('/admin/order/save', array('before' => 'auth', function() {
     
     foreach ($groups as $place => $group) 
     {
-        $group = Group::find($group);
+        $group = \Entities\Group::find($group);
         $group->order = ($place + 1);
         $group->save();
     }

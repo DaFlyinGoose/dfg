@@ -3,6 +3,7 @@
 # Except this file
 !.gitignore
 /app/config/database.php
+/app/config/environment.php
 /app/assets/bower_components
 /public/css
 /public/js

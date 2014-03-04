@@ -1,7 +1,8 @@
-@extends('site.layout')
+@extends('layouts.layout')
 
 @section('stylesheets')
-  <link rel="stylesheet" href="/css/pages/home.css">
+	@parent
+	<link rel="stylesheet" href="/css/pages/home.css">
 @stop
 
 @section('content')
@@ -10,9 +11,9 @@
       <div class="row">
         <h3>Recent posts</h3>
         <ul>
-          <li><i class="fa fa-arrow-circle-o-right"></i> <a href="/article.html">Setting up a blogging application in Laravel</a> <span>(today)</span></li>
-          <li><i class="fa fa-arrow-circle-o-right"></i> <a href="/article.html">Using Vagant to kickstart your Laravel app</a> <span>(one week ago)</span></li>
-          <li><i class="fa fa-arrow-circle-o-right"></i> <a href="/article.html">How Laravel made me a better developer</a> <span>(one month ago)</span></li>
+			@foreach ($posts as $post)
+				<li><i class="fa fa-arrow-circle-o-right"></i> <a href="/blog/{{ $post->slug }}">{{ $post->title }}</a> <span>({{ substr($post->published_date, 0, 10) }})</span></li>
+			@endforeach
         </ul>
         <a class="next" href="#"><i class="fa fa-arrow-circle-down"></i></a>
       </div>

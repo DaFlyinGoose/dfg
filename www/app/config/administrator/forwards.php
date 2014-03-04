@@ -21,7 +21,7 @@ return array(
 	 *
 	 * @type string
 	 */
-	'model' => 'Forward',
+	'model' => '\Entities\Forward',
 
 	/**
 	 * The columns array

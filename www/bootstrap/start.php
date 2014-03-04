@@ -25,18 +25,16 @@ $app = new Illuminate\Foundation\Application;
 */
 
 $env = $app->detectEnvironment(function() {
-    switch($_SERVER['HTTP_HOST'])
-    {
-        case 'dfg.local':
-            return 'local';
-            break;
-        case 'staging.dfg.gd':
-            return 'staging';
-            break;
-        default:
-            return 'production';
-            break;
-    }
+	$envFile = '../app/config/environment.php';
+	
+    if (file_exists($envFile)) 
+	{
+		$env = include($envFile);
+		
+		return $env['environment'];
+	}
+	
+	return 'production';
 });
 
 /*

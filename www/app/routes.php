@@ -13,10 +13,33 @@
 
 Route::get('/', function()
 {
-	$posts = Fbf\LaravelBlog\Post::orderBy('id', 'DESC')
+	$posts = Fbf\LaravelBlog\Post::where('status', 'APPROVED')
+		->orderBy('published_date', 'DESC')
 		->take('3')
 		->get();
-	return Response::view('site.index', array('posts' => $posts));
+	
+	return Response::view('site.index', array('posts' => $posts, 'datesService' => new Services\DatesService()));
+});
+Route::post('/', function() {
+	$input = array_only(Input::all(), array('name', 'email', 'text'));
+	$validator = Validator::make(
+		$input,
+		array('email' => 'required|email', 'text' => 'required')
+	);
+	
+	if ($validator->fails())
+	{
+		return Redirect::to(URL::previous())->withErrors($validator);
+	}
+	else
+	{
+		Mail::queue('emails.contact', $input, function($message) {
+			$message->to('c.goosey.uk@googlemail.com', 'Chris Goosey')
+				->subject('DFG Contact Email');
+		});
+		
+		return Redirect::to(URL::previous())->with('success', 'Message Sent!');
+	}
 });
 
 Route::get('/user/login', function() {

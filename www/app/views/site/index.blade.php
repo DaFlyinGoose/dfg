@@ -12,7 +12,7 @@
         <h3>Recent posts</h3>
         <ul>
 			@foreach ($posts as $post)
-				<li><i class="fa fa-arrow-circle-o-right"></i> <a href="/blog/{{ $post->slug }}">{{ $post->title }}</a> <span>({{ substr($post->published_date, 0, 10) }})</span></li>
+				<li><i class="fa fa-arrow-circle-o-right"></i> <a href="/blog/{{ $post->slug }}">{{ $post->title }}</a> <span>({{ $datesService->friendlyDate($post->published_date) }})</span></li>
 			@endforeach
         </ul>
         <a class="next" href="#"><i class="fa fa-arrow-circle-down"></i></a>
@@ -46,7 +46,6 @@
           <span class="success label">JavaScript</span>
           <span class="success label">CSS3</span>
           <span class="success label">HTML5</span>
-          <span class="success label">NODEJS</span>
         </div>
       </div>
       <div class="row">
@@ -59,7 +58,6 @@
           <span class="label">Laravel</span>
           <span class="label">AngularJS</span>
           <span class="label">Symfony</span>
-          <span class="label">Zend Framework</span>
         </div>
       </div>
       <i class="fa fa-check-square-o"></i>
@@ -70,38 +68,49 @@
         <div class="row">
           <div class="large-6 columns">
             <h3>Get in touch</h3>
+			@if (count($errors->getMessages()) > 0)
+				@foreach ($errors->getMessages() as $errorArr)
+					@foreach ($errorArr as $error)	
+						<p>{{ $error }}</p>
+					@endforeach
+				@endforeach
+			@endif
+			@if (Session::has('success'))
+				<p>{{ Session::get('success') }}</p>
+			@endif
           </div>
         </div>
         <div class="row">
           <div class="large-6 columns">
-            <form>
+            {{ Form::open() }}
               <div class="row">
                 <div class="large-12 columns">
                   <label>
-                    <input type="text" placeholder="name" />
+					{{ Form::text('name', Session::get('name', ''), array('placeholder' => 'name')) }}
                   </label>
                 </div>
               </div>
               <div class="row">
                 <div class="large-12 columns">
                   <label>
-                    <input type="text" placeholder="email" />
+					{{ Form::text('email', Session::get('email', ''), array('placeholder' => 'email')) }}
                   </label>
                 </div>
               </div>
               <div class="row">
                 <div class="large-12 columns">
                   <label>
-                    <textarea rows="12x§  " placeholder="message"></textarea>
+					{{ Form::textarea('text', Session::get('text', ''), array('placeholder' => 'message', 'rows' => '12x§')) }}
                   </label>
                 </div>
               </div>
-            </form>
-            <a href="#" class="success button">Send</a>
+			{{ Form::submit('Send', array('class' => 'success button')) }}
+            {{ Form::close() }}
           </div>
           <div class="large-6 columns">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ut erat laoreet, posuere dolor vitae, dignissim tortor.</p>
-            <p>Vestibulum congue urna nec accumsan porttitor. Phasellus et neque sit amet mi scelerisque semper.</p>
+			  <p>I built this blog to reach out to the community, I'm always happy to hear from other developers.</p> 
+			  <p>Whether you have comments about a post or have a good suggestion for another, feel free to get in touch!</p>
+            <p>Also happy to receive funny memes...</p>
           </div>
         </div>
       </div>
@@ -110,10 +119,10 @@
 
     <section class="social">
 
-      <a href=""><i class="fa fa-stack-overflow"></i></a>
-      <a href=""><i class="fa fa-github"></i></a>
-      <a href=""><i class="fa fa-linkedin-square"></i></a>
-      <a href=""><i class="fa fa-facebook-square"></i></a>
+      <a href="http://stackoverflow.com/users/1651926/chris-goosey"><i class="fa fa-stack-overflow"></i></a>
+      <a href="https://github.com/cgoosey1"><i class="fa fa-github"></i></a>
+      <a href="http://uk.linkedin.com/pub/chris-goosey/4b/a98/4b9/"><i class="fa fa-linkedin-square"></i></a>
+      <a href="https://twitter.com/DaFlyinGoose"><i class="fa fa-twitter-square"></i></a>
 
     </section>
 

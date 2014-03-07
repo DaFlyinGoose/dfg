@@ -13,7 +13,7 @@
 
 Route::get('/', function()
 {
-	$posts = Fbf\LaravelBlog\Post::where('status', 'APPROVED')
+	$posts = Fbf\LaravelBlog\Post::live()
 		->orderBy('published_date', 'DESC')
 		->take('3')
 		->get();

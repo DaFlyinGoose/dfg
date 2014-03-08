@@ -5,7 +5,6 @@
 	"license": "MIT",
 	"require": {
 		"laravel/framework": "4.1.*",
-            "barryvdh/laravel-debugbar": "1.*",
             "fbf/laravel-blog": "dev-master",
             "frozennode/administrator": "dev-master",
             "hisorange/browser-detect": "dev-master"
@@ -18,7 +17,8 @@
 		"classmap": [
 			"app/commands",
 			"app/controllers",
-            "app/models",
+		        "app/extensions/Laravel-Blog",
+			"app/models",
 			"app/models/Services",
 			"app/database/migrations",
 			"app/database/seeds",

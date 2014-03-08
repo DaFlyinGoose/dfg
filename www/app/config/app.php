@@ -106,8 +106,9 @@ return array(
 		'Illuminate\Validation\ValidationServiceProvider',
 		'Illuminate\View\ViewServiceProvider',
 		'Illuminate\Workbench\WorkbenchServiceProvider',
-        'Frozennode\Administrator\AdministratorServiceProvider',
-        'Fbf\LaravelBlog\LaravelBlogServiceProvider',
+                'Frozennode\Administrator\AdministratorServiceProvider',
+      		'Fbf\LaravelBlog\LaravelBlogServiceProvider',
+		'Extensions\LaravelBlog\LaravelBlogServiceProvider',
 		'hisorange\browserdetect\Providers\BrowserDetectServiceProvider',
 
 	),

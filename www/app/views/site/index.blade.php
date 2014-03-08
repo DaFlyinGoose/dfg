@@ -12,7 +12,7 @@
         <h3>Recent posts</h3>
         <ul>
 			@foreach ($posts as $post)
-				<li><i class="fa fa-arrow-circle-o-right"></i> <a href="{{ $post->getUrl() }}">{{ $post->title }}</a> <span>({{ $datesService->friendlyDate($post->published_date) }})</span></li>
+				<li><i class="fa fa-arrow-circle-o-right"></i> <a href="{{ $post->getUrl() }}">{{ $post->title }}</a> <span>({{ $post->human_date }})</span></li>
 			@endforeach
         </ul>
         <a class="next" href="#"><i class="fa fa-arrow-circle-down"></i></a>

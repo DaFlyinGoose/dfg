@@ -11,4 +11,10 @@ class Post extends BlogPost
 			->orderBy('published_date', 'DESC')
 			->take($take);
 	}
+
+	public function getHumanDateAttribute()
+	{
+		$date = new \DateTime($this->attributes['published_date']);
+		return \Carbon\Carbon::instance($date)->diffForHumans();
+	}
 }

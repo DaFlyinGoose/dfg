@@ -16,8 +16,7 @@ Route::get('/', function()
 	return Response::view(
 		'site.index',
 		array(
-			'posts' => Entities\Post::latest()->get(),
-			'datesService' => new Services\DatesService()
+			'posts' => Entities\Post::latest()->get()
 		)
 	);
 });

@@ -13,13 +13,15 @@
 
 Route::get('/', function()
 {
-	$posts = Fbf\LaravelBlog\Post::live()
-		->orderBy('published_date', 'DESC')
-		->take('3')
-		->get();
-	
-	return Response::view('site.index', array('posts' => $posts, 'datesService' => new Services\DatesService()));
+	return Response::view(
+		'site.index',
+		array(
+			'posts' => Entities\Post::latest()->get(),
+			'datesService' => new Services\DatesService()
+		)
+	);
 });
+
 Route::post('/', function() {
 	$input = array_only(Input::all(), array('name', 'email', 'text'));
 	$validator = Validator::make(

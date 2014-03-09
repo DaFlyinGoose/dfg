@@ -10,7 +10,7 @@
 		<div class="container wrapper">
 			<div class="row wrapper__inner">
 				@include('includes.list')
-				@include('includes.archives')
+				<!-- @include('includes.archives') -->
 			</div>
 		</div>
 

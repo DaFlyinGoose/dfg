@@ -18,7 +18,7 @@
   <div class="container article wrapper">
     <div class="row wrapper__inner">
       <div class="large-12 columns">
-		  
+
 		@include('includes.details')
         <div id="mc_embed_signup">
         <form action="http://dfg.us3.list-manage1.com/subscribe/post?u=4a528a507f9b478b5867f1a38&amp;id=f960c71c6b" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
@@ -45,8 +45,8 @@
 		 <div id="disqus_thread"></div>
  		 <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 		 <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-		@include('includes.archives')
-		  
+		<!-- @include('includes.archives') -->
+
     </div>
   </div>
 
@@ -72,7 +72,7 @@
         if (script.readyState && script.onload!==null){
             script.onreadystatechange= function () {
                   if (this.readyState == 'complete') mce_preload_check();
-            }    
+            }
         }
     }
 
@@ -146,7 +146,7 @@
                                                 this.value = '';
                                             } else {
                                                 if (/\[day\]/.test(fields[0].name)){
-                                                    this.value = fields[1].value+'/'+fields[0].value+'/'+fields[2].value;                                            
+                                                    this.value = fields[1].value+'/'+fields[0].value+'/'+fields[2].value;
                                                 } else {
                                                     this.value = fields[0].value+'/'+fields[1].value+'/'+fields[2].value;
                                                 }
@@ -172,12 +172,12 @@
                                         });
                                 });
                             return mce_validator.form();
-                        }, 
+                        },
                         success: mce_success_cb
                     };
           $('#mc-embedded-subscribe-form').ajaxForm(options);
-          
-          
+
+
         });
     }
     function mce_success_cb(resp){
@@ -213,11 +213,11 @@
             try{
                 if (index== -1){
                     $('#mce-'+resp.result+'-response').show();
-                    $('#mce-'+resp.result+'-response').html(msg);            
+                    $('#mce-'+resp.result+'-response').html(msg);
                 } else {
                     err_id = 'mce_tmp_error_msg';
                     html = '<div id="'+err_id+'" style="'+err_style+'"> '+msg+'</div>';
-                    
+
                     var input_id = '#mc_embed_signup';
                     var f = $(input_id);
                     if (ftypes[index]=='address'){

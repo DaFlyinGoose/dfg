@@ -22,7 +22,8 @@
 		@include('includes.details')
         <div id="mc_embed_signup">
         <form action="http://dfg.us3.list-manage1.com/subscribe/post?u=4a528a507f9b478b5867f1a38&amp;id=f960c71c6b" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-            <h2>DFG Newsletter</h2>
+            <h2>Sign Up For My Newsletter</h2>
+            <p>Every week I put together an article digest of web related articles I found interesting and wanted to share, if you would like to receive this email please subscribe below!</p>
         <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
         <div class="mc-field-group">
             <label for="mce-NAME">Your Name </label>

@@ -3,6 +3,7 @@
 @section('stylesheets')
 	@parent
 	<link rel="stylesheet" href="/css/pages/home.css">
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.min.css">
 @stop
 
 @section('content')

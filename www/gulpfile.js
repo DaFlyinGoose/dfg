@@ -21,10 +21,8 @@ var gulp = require('gulp'),
     src: {
       views: 'app/assets/views/*.blade.php',
       sass_vendor: ['app/assets/sass/bootstrap.scss'],
-      sass_bundle: ['app/assets/sass/**/*.scss', '!src/sass/bootstrap.scss', '!src/sass/pages/*.scss'],
-      sass_pages: [
-        'app/assets/sass/pages/*.scss'
-      ],
+      sass_bundle: ['app/assets/sass/layout.scss', '!src/sass/bootstrap.scss', '!src/sass/pages/*.scss'],
+      sass_pages: ['app/assets/sass/pages/*.scss'],
       vendor: ['app/assets/vendor/**/*'], // non bower supported vendor scripts
       js: 'app/assets/js/*.js',
       images: ['app/assets/images/**/*']

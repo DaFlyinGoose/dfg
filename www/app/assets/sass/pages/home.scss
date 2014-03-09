@@ -20,11 +20,17 @@ $include-html-global-classes: false;
 
 /* page specific styles */
 
+.off-canvas-wrap,
+.inner-wrap {
+  backface-visibility: visible;
+}
+
 .hero {
   position: relative;
   background-image: url(/images/home/bg.hero.jpg);
   background-size: cover;
   background-position: top right;
+  background-attachment: fixed;
   @media #{$medium-up} {
     min-height: 428px;
   }

@@ -1,4 +1,12 @@
 <?php
+View::composer('includes.details', function($view)
+{
+    $article = Entities\Post::where('slug', Request::segment(2))
+		->first();
+	
+	$article->hits = $article->hits + 1;
+	$article->save();
+});
 View::composer(array('administrator::layouts.default'), function($view)
 {
     if ($view->page === 'site.admin.order')

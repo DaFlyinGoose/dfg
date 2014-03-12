@@ -7,7 +7,8 @@
 		"laravel/framework": "4.1.*",
             "fbf/laravel-blog": "dev-master",
             "frozennode/administrator": "dev-master",
-            "hisorange/browser-detect": "dev-master"
+            "hisorange/browser-detect": "dev-master",
+            "hugofirth/mailchimp": "2.0.*"
 	},
 	"require-dev": {
             "barryvdh/laravel-debugbar": "1.*",

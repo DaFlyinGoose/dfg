@@ -11,6 +11,9 @@
 |
 */
 
+//dd(MailchimpWrapper::lists()->members('f960c71c6b', array()));
+dd(EmailService::subscribersCron());
+
 Route::get('/', function()
 {
 	return Response::view(

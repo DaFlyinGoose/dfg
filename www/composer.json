@@ -8,7 +8,8 @@
             "fbf/laravel-blog": "dev-master",
             "frozennode/administrator": "dev-master",
             "hisorange/browser-detect": "dev-master",
-            "hugofirth/mailchimp": "2.0.*"
+            "hugofirth/mailchimp": "2.0.*",
+			"binarix/foundation-pagination": "dev-master"
 	},
 	"require-dev": {
             "barryvdh/laravel-debugbar": "1.*",

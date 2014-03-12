@@ -39,9 +39,6 @@ return array(
 			'title' => 'Status',
 			'select' => "CASE (:table).status WHEN '".Fbf\LaravelBlog\Post::APPROVED."' THEN 'Approved' WHEN '".Fbf\LaravelBlog\Post::DRAFT."' THEN 'Draft' END",
 		),
-		'hits' => array(
-			'title' => 'Hits'
-		),
 		'updated_at' => array(
 			'title' => 'Last Updated'
 		),
@@ -65,30 +62,30 @@ return array(
 					return $model->exists;
 				},
 		),
-		'image' => array(
-			'title' => 'Image',
+		'main_image' => array(
+			'title' => 'Main Image',
 			'type' => 'image',
 			'naming' => 'random',
-			'location' => public_path() . Config::get('laravel-blog::originals_dir'),
+			'location' => public_path() . Config::get('laravel-blog::images.main_image.original.dir'),
 			'size_limit' => 5,
 			'sizes' => array(
 				array(
-					Config::get('laravel-blog::thumbnail_image_width'),
-					Config::get('laravel-blog::thumbnail_image_height'),
-					'crop',
-					public_path() . Config::get('laravel-blog::thumbnails_image_dir'),
+					Config::get('laravel-blog::images.main_image.sizes.thumbnail.width'),
+					Config::get('laravel-blog::images.main_image.sizes.thumbnail.height'),
+					Config::get('laravel-blog::images.main_image.sizes.thumbnail.method'),
+					public_path() . Config::get('laravel-blog::images.main_image.sizes.thumbnail.dir'),
 					100
 				),
 				array(
-					Config::get('laravel-blog::details_image_max_width'),
-					Config::get('laravel-blog::details_image_max_height'),
-					'auto',
-					public_path() . Config::get('laravel-blog::details_image_dir'),
+					Config::get('laravel-blog::images.main_image.sizes.resized.width'),
+					Config::get('laravel-blog::images.main_image.sizes.resized.height'),
+					Config::get('laravel-blog::images.main_image.sizes.resized.method'),
+					public_path() . Config::get('laravel-blog::images.main_image.sizes.resized.dir'),
 					100
 				),
 			),
 		),
-		'image_alt' => array(
+		'main_image_alt' => array(
 			'title' => 'Image ALT text',
 			'type' => 'text',
 		),
@@ -106,9 +103,27 @@ return array(
 			'title' => 'Content',
 			'type' => 'wysiwyg',
 		),
+		'link_text' => array(
+			'title' => 'Link Text',
+			'type' => 'text',
+			'visible' => Config::get('laravel-blog::link.show'),
+		),
+		'link_url' => array(
+			'title' => 'Link URL',
+			'type' => 'text',
+			'visible' => Config::get('laravel-blog::link.show'),
+		),
+		'is_sticky' => array(
+			'title' => 'Is sticky?',
+			'type' => 'bool',
+		),
 		'in_rss' => array(
 			'title' => 'In RSS Feed?',
 			'type' => 'bool',
+		),
+		'meta_description' => array(
+			'title' => 'Page Title',
+			'type' => 'text',
 		),
 		'meta_description' => array(
 			'title' => 'Meta Description',

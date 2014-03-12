@@ -11,7 +11,11 @@
 		</div>
 		@endforeach
 
-		{{ $posts->links() }}
+		<div class="row">
+			<div class="pagination-centered pagination-padding">
+				{{ $posts->links() }}
+			</div>
+		</div>
 
 		@else
 

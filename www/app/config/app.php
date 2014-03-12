@@ -110,6 +110,7 @@ return array(
       		'Fbf\LaravelBlog\LaravelBlogServiceProvider',
 		'Extensions\LaravelBlog\LaravelBlogServiceProvider',
 		'hisorange\browserdetect\Providers\BrowserDetectServiceProvider',
+		'Binarix\FoundationPagination\FoundationPaginationServiceProvider',
 
 	),
 

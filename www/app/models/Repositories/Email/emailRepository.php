@@ -53,13 +53,9 @@ class EmailRepository implements EmailInterface
         }
         else
         {
-            $newGroup = $this->emailGroupModel;
-            $newGroup->name = $group;
-            
-            if ($newGroup->save())
-            {
-                return $newGroup;
-            }
+			$group = array('name' => $group);
+			
+            return $this->emailGroupModel($group);
         }
         
         return false;
@@ -99,15 +95,12 @@ class EmailRepository implements EmailInterface
         }
         else
         {
-            $newMail = $this->emailModel;
-            $newMail->email = $email['email'];
-            $newMail->name = isset($email['name'])? $email['name'] : $email['email'];
-            $newMail->group_id = $groupId;
-            
-            if ($newMail->save())
-            {
-                return $newMail;
-            }
+			if ($email['name'] == null)
+			{
+				$email['name'] = $email['email'];
+			}
+			
+            return $this->emailModel->create($email);
         }
         
         return false;

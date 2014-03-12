@@ -6,7 +6,7 @@ class EmailGroups extends Eloquent
 {
 	protected $table = 'email_groups';
 	
-	//protected $with = array('emails');
+	protected $fillable = array('name');
 	
 	public function emails() 
 	{

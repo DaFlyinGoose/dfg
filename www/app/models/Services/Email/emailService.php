@@ -27,18 +27,16 @@ class EmailService
     public function subscribersCron()
     {
         $members = MailchimpWrapper::lists()->members($this->subscriberListId, array());
-        print_r($members);
         $count = 0;
         foreach ($members['data'] as $member)
         {
             if (!$this->emailRepo->isEmail($member['email']))
             {
-                print_R($member['email']);
                 $this->emailRepo->addEmail($member['email'], 'subscribers');
                 
-                Mail::send('emails.subscribed', array(), function($message)
+                Mail::send('emails.subscribed', array(), function($message) use ($member)
                 {
-                    $message->to('c.goosey.uk@googlemail.com', 'John Smith')->subject('Welcome!');
+                    $message->to($member['email'])->subject('Welcome!');
                 });
                 
                 $count++;

@@ -13,7 +13,7 @@ return array(
 	|
 	*/
 
-	'debug' => true,
+	'debug' => false,
 
 	/*
 	|--------------------------------------------------------------------------
@@ -106,12 +106,15 @@ return array(
 		'Illuminate\Validation\ValidationServiceProvider',
 		'Illuminate\View\ViewServiceProvider',
 		'Illuminate\Workbench\WorkbenchServiceProvider',
-                'Frozennode\Administrator\AdministratorServiceProvider',
-      		'Fbf\LaravelBlog\LaravelBlogServiceProvider',
+        'Frozennode\Administrator\AdministratorServiceProvider',
+      	'Fbf\LaravelBlog\LaravelBlogServiceProvider',
 		'Extensions\LaravelBlog\LaravelBlogServiceProvider',
 		'hisorange\browserdetect\Providers\BrowserDetectServiceProvider',
 		'Binarix\FoundationPagination\FoundationPaginationServiceProvider',
-
+		'Hugofirth\Mailchimp\MailchimpServiceProvider',
+		
+		'Repositories\Email\EmailRepositoryServiceProvider',
+		'Services\Email\EmailServiceServiceProvider',
 	),
 
 	/*
@@ -177,7 +180,10 @@ return array(
 		'URL'             => 'Illuminate\Support\Facades\URL',
 		'Validator'       => 'Illuminate\Support\Facades\Validator',
 		'View'            => 'Illuminate\Support\Facades\View',
-		'BrowserDetect' => 'hisorange\browserdetect\Facades\BrowserDetect',
+		'BrowserDetect'   => 'hisorange\browserdetect\Facades\BrowserDetect',
+		'MailchimpWrapper'=> 'Hugofirth\Mailchimp\Facades\MailchimpWrapper',
+		
+		'EmailService'	  => 'Services\Email\EmailFacade',
 
 	),
 

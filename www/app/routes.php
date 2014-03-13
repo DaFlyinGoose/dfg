@@ -21,10 +21,6 @@ Route::get('/', function()
 	);
 });
 
-Route::get('cron/subscribed', function() {
-	return EmailService::subscribersCron();
-});
-
 Route::post('/', function() {
 	$input = array_only(Input::all(), array('name', 'email', 'text'));
 	$validator = Validator::make(
@@ -39,7 +35,7 @@ Route::post('/', function() {
 	else
 	{
 		Mail::queue('emails.contact', $input, function($message) {
-			$message->to('c.goosey.uk@googlemail.com', 'Chris Goosey')
+			$message->to('chris@dfg.gd', 'Chris Goosey')
 				->subject('DFG Contact Email');
 		});
 		

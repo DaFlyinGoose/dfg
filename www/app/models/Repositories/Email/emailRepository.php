@@ -89,6 +89,8 @@ class EmailRepository implements EmailInterface
         }
         
         $email = $this->parseEmail($email);
+		$email['group_id'] = $groupId;
+		
         if ($this->isEmail($email['email']))
         {
             return $this->getEmailByEmail($email['email']);

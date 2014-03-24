@@ -1,4 +1,5 @@
 <?php namespace Services;
+use \Entities\Forward;
 
 use \Eloquent;
 use \Mail;
@@ -49,14 +50,14 @@ class Newsletter
         while($i == 0)
         {
             $str = $this->generateStr(5);
-            if (!\Forward::where('forward', $str)->first())
+            if (!Forward::where('forward', $str)->first())
             {
                 $forwardAttr['forward'] = $str;
                 $i = 1;
             }
         }
         
-        \Forward::create($forwardAttr);
+        Forward::create($forwardAttr);
         
         return $str;
     }

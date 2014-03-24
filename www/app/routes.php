@@ -22,15 +22,19 @@ Route::get('/', function()
 });
 
 Route::post('/', function() {
-	$input = array_only(Input::all(), array('name', 'email', 'text'));
+	$input = Input::all();
 	$validator = Validator::make(
 		$input,
-		array('email' => 'required|email', 'text' => 'required')
+		array(
+			'email' => 'required|email', 
+			'text' => 'required',
+			'captcha' => 'required|captcha',
+		)
 	);
 	
 	if ($validator->fails())
 	{
-		return Redirect::to(URL::previous())->withErrors($validator);
+		return Redirect::to('/#contact')->withErrors($validator);
 	}
 	else
 	{
@@ -39,7 +43,7 @@ Route::post('/', function() {
 				->subject('DFG Contact Email');
 		});
 		
-		return Redirect::to(URL::previous())->with('success', 'Message Sent!');
+		return Redirect::to('/#contact')->with('success', 'Message Sent!');
 	}
 });
 

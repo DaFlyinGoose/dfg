@@ -9,7 +9,9 @@
             "frozennode/administrator": "dev-master",
             "hisorange/browser-detect": "dev-master",
             "hugofirth/mailchimp": "2.0.*",
-			"binarix/foundation-pagination": "dev-master"
+			"binarix/foundation-pagination": "dev-master",
+			"bogardo/mailgun": "dev-master",
+			"mews/captcha": "dev-master"
 	},
 	"require-dev": {
             "barryvdh/laravel-debugbar": "1.*",

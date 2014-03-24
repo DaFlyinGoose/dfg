@@ -6,7 +6,7 @@ class Forward extends Eloquent
 {
 	protected $table = 'forwards';
     
-    protected $fillable = array('url', 'forward', 'email_id');
+    protected $fillable = array('url', 'forward', 'email_id', 'article_id');
 	
 	public function email() 
 	{

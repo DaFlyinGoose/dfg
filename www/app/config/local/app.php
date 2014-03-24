@@ -31,6 +31,9 @@ return array(
         'Frozennode\Administrator\AdministratorServiceProvider',
         'Fbf\LaravelBlog\LaravelBlogServiceProvider',
 		'hisorange\browserdetect\Providers\BrowserDetectServiceProvider',
+		'Bogardo\Mailgun\MailgunServiceProvider',
+		'Mews\Captcha\CaptchaServiceProvider',
+		
         'Barryvdh\Debugbar\ServiceProvider',
 		'PhpConsole\Laravel\ServiceProvider',
 

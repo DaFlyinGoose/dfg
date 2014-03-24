@@ -31,7 +31,7 @@ class Newsletter
             }
         }
         
-        Mail::send('emails.newsletter', array('articleForwards' => $articleForwards, 'newsletter' => $newsletter), function($message) use ($email, &$newsletter)
+        Mailgun::send('emails.newsletter', array('articleForwards' => $articleForwards, 'newsletter' => $newsletter), function($message) use ($email, &$newsletter)
         {
             $message->to($email->email, $email->name)->subject($newsletter->subject);
         });
@@ -42,6 +42,7 @@ class Newsletter
         $forwardAttr = array(
             'url' => $article->url,
             'email_id' => $email->id,
+            'article_id' => $article->id,
         );
         
         $i = 0;

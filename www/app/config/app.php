@@ -13,7 +13,7 @@ return array(
 	|
 	*/
 
-	'debug' => false,
+	'debug' => true,
 
 	/*
 	|--------------------------------------------------------------------------
@@ -112,6 +112,8 @@ return array(
 		'hisorange\browserdetect\Providers\BrowserDetectServiceProvider',
 		'Binarix\FoundationPagination\FoundationPaginationServiceProvider',
 		'Hugofirth\Mailchimp\MailchimpServiceProvider',
+		'Bogardo\Mailgun\MailgunServiceProvider',
+		'Mews\Captcha\CaptchaServiceProvider',
 		
 		'Repositories\Email\EmailRepositoryServiceProvider',
 		'Services\Email\EmailServiceServiceProvider',
@@ -182,6 +184,7 @@ return array(
 		'View'            => 'Illuminate\Support\Facades\View',
 		'BrowserDetect'   => 'hisorange\browserdetect\Facades\BrowserDetect',
 		'MailchimpWrapper'=> 'Hugofirth\Mailchimp\Facades\MailchimpWrapper',
+		'Captcha' 		  => 'Mews\Captcha\Facades\Captcha',
 		
 		'EmailService'	  => 'Services\Email\EmailFacade',
 

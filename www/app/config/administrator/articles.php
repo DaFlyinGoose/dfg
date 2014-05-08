@@ -96,6 +96,10 @@ return array(
 	 * @type array
 	 */
 	'filters' => array(
+        'title' => array(
+            'type' => 'text',
+            'title' => 'Search Articles'
+        )
 	),
 
 	/**

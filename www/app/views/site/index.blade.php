@@ -109,7 +109,7 @@
                 <div class="large-12 columns">
                   <label>
 					{{ HTML::image(Captcha::img(), 'Captcha image') }}<br>
-					{{ Form::text('captcha', '', array('placeholder' => 'Enter text from above'))) }}
+					{{ Form::text('captcha', '', array('placeholder' => 'Enter text from above')) }}
                   </label>
                 </div>
               </div>

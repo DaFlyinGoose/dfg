@@ -59,6 +59,7 @@ return array(
 		'Newsletters' => array('newsletters', 'Order' => 'page.site.admin.order'),
 		'articles',
 		'forwards',
+		'cheatsheets',
 	),
 
 	/**

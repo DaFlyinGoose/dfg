@@ -11,6 +11,12 @@
 |
 */
 
+Route::get('/cheatsheets', function() {
+    $data = array('cheatsheets' => Entities\CheatSheets::all());
+
+    return View::make('site.cheatsheets', $data);
+});
+
 Route::get('/', function()
 {
 	return Response::view(

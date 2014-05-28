@@ -13,19 +13,44 @@
     </style>
     <style>
         #menuContainer {
-            width: 25%;
+            position: fixed;
+            width: 200px;
             float: left;
-            display: inline-block;
-            border: green solid 1px;
             margin: 0 10px 0 10px;
-            height: 100%;
+        }
+        #menuContainer div {
+            font-weight: 400;
+            font-family: Roboto Slab,Helvetica,Arial,Sans-serif;
+            font-size: 14px;
+            line-height: 14px;
+            white-space: nowrap;
+            display: inline-block;
+            position: relative;
+            border-bottom: 1px solid #fff;
+            padding: .7rem 1rem;
+            background-color: #008CBA;
+            color: #fff;
+            width: 93%;
+            -webkit-transition: background-color 300ms ease-out;
+            transition: background-color 300ms ease-out;
+            -webkit-transition: width 300ms ease-out;
+            transition: width 300ms ease-out;
+        }
+        #menuContainer div:hover {
+            background-color: #007295;
+            cursor:pointer;
+        }
+        #menuContainer .active {
+            width: 100%;
         }
         #cheatsheetContainer {
             width: 70%;
             float: left;
             display: inline-block;
-            border: red solid 1px;
-            margin: 0 10px 0 10px;
+            margin: 0 10px 0 240px;
+        }
+        button {
+            padding: .5rem 1.25rem;
         }
     </style>    
 @stop
@@ -36,22 +61,65 @@
         <div class="large-12 columns">
             <section>
                 <div id='menuContainer'>
-                    1<br>
-                    2<br>
-                    3<br>
-                    4<br>
-                    5<br>
+                    @foreach ($cheatsheets as $sheet)
+                        <div 
+                            @if ($cheatsheets[0]['id'] == $sheet['id'])
+                                class='cheatsheetLink active' 
+                            @else
+                                class='cheatsheetLink' 
+                            @endif
+                        id='{{ camel_case($sheet['name']) }}'>{{ $sheet['name'] }}</div>
+                    @endforeach
                 </div>
                 <div id='cheatsheetContainer'>
                     @foreach ($cheatsheets as $sheet)
-                        <h1>{{ $sheet['name'] }}</h1>
+                        <h1 id='{{ camel_case($sheet['name']) }}Desc'>{{ $sheet['name'] }}</h1>
                         <p>{{ $sheet['description'] }}</p>
-                        <button>View Cheat Sheet...</button>
-                        <hr width='85%'>
+                        <a href='{{ $sheet['url'] }}' target='_blank'><button>View Cheat Sheet...</button></a>
+                        <a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-text="{{ $sheet['name'] }}" data-url="{{ $sheet['url'] }}" data-via="" data-size="large">Tweet</a>
+                        <hr>
                     @endforeach
                 </div>
             </section>
         </div>
     </div>
 </div>
+@stop
+
+@section('javascript')
+	@parent
+    <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+    <script type="text/javascript" src="/js/waypoints.min.js"></script>
+    <script>
+        $('html, body').animate({ scrollTop: 0 }, 0);
+        var scroll = true;
+        $('.cheatsheetLink').click(function() {
+            scroll = false;
+            var element = $(this).attr('id');
+            removeActiveTab();
+            $(this).addClass('active');
+            $('html, body').animate({
+                scrollTop: ($("#" + element + "Desc").offset().top - 100)
+            }, 500, 'swing', function () { scroll = true;});
+        });
+        
+        @foreach ($cheatsheets as $sheet)
+            $('#{{ camel_case($sheet['name']) }}Desc').waypoint(function(direction) {
+                if (scroll == true)
+                {
+                    removeActiveTab();
+                    var id = $(this).attr('id').slice(0, -4);
+                    $('#' + id).addClass('active');
+                }
+            });
+        @endforeach
+       
+        function removeActiveTab()
+        {
+            $('#menuContainer').children().each(function() {
+                $(this).removeClass('active');
+            });
+        }
+    </script>
+    
 @stop

@@ -125,16 +125,6 @@
       </div>
 
     </section>
-
-    <section class="social">
-
-      <a href="http://stackoverflow.com/users/1651926/chris-goosey"><i class="fa fa-stack-overflow"></i></a>
-      <a href="https://github.com/cgoosey1"><i class="fa fa-github"></i></a>
-      <a href="http://uk.linkedin.com/pub/chris-goosey/4b/a98/4b9/"><i class="fa fa-linkedin-square"></i></a>
-      <a href="https://twitter.com/DaFlyinGoose"><i class="fa fa-twitter-square"></i></a>
-
-    </section>
-
 @stop
 
 

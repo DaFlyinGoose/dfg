@@ -49,3 +49,15 @@ body {
     }
   }
 }
+
+.social {
+  background: #252525; /* TODO(del) */
+  text-align: center;
+  padding: 20px 0;
+  a {
+    font-size: rem-calc(80);
+    display: inline-block;
+    padding: 0 40px;
+    color: $white;
+  }
+}

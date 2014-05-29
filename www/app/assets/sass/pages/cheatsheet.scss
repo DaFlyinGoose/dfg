@@ -1,0 +1,69 @@
+// settings/colours/fonts etc
+@import "../site/settings";
+@import "../foundation/settings";
+
+// This is really fucking annoying
+// Because the foundation framework has a global scss
+// file that dumps additional meta data into the css
+// and does all the basic application of styles without the
+// ability to disable it on a individual file level
+// because it assumes there will only be one stylesheet (i guess)
+// we need to add a variable to each of these files
+// to stop it adding SOME (yes not all) of those styles
+// it will still add meta vars for the responsive viewports
+// which we need to do our media query conditional styling below
+$include-html-global-classes: false;
+
+// rem-calc etc
+@import "../../bower_components/foundation/scss/foundation/components/global";
+@import "../../bower_components/foundation/scss/foundation/functions";
+
+/* page specific styles */
+#menuContainer {
+    position: fixed;
+    width: 200px;
+    float: left;
+    margin: 0 10px 0 10px;
+}
+#menuContainer div {
+    font-weight: 400;
+    font-family: Roboto Slab,Helvetica,Arial,Sans-serif;
+    font-size: 14px;
+    line-height: 14px;
+    white-space: nowrap;
+    display: inline-block;
+    position: relative;
+    border-bottom: 1px solid #fff;
+    padding: .7rem 1rem;
+    background-color: #008CBA;
+    color: #fff;
+    width: 93%;
+    -webkit-transition: background-color 300ms ease-out;
+    transition: background-color 300ms ease-out;
+    -webkit-transition: width 300ms ease-out;
+    transition: width 300ms ease-out;
+}
+#menuContainer div:hover {
+    background-color: #007295;
+    cursor:pointer;
+}
+#menuContainer .active {
+    width: 100%;
+}
+#cheatsheetContainer {
+    width: 70%;
+    float: left;
+    display: inline-block;
+    margin: 0 10px 0 240px;
+}
+button {
+    padding: .5rem 1.25rem;
+}
+.sharingButtons {
+    padding-top: 7px;
+    display: inline-block;
+    float: right;
+}
+.contact {
+    padding: 20px 0 20px 0;
+}

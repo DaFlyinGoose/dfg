@@ -10,6 +10,7 @@
 	<link href='http://fonts.googleapis.com/css?family=Roboto|Roboto+Slab:400,700,300,100' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="/css/bundle.vendor.css">
 	<link rel="stylesheet" href="/css/bundle.site.css">
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.min.css">
 @stop
 
 @section('body')
@@ -57,6 +58,12 @@
 			@yield('content')
 			<!-- /content -->
 
+            <section class="social">
+              <a href="http://stackoverflow.com/users/1651926/chris-goosey"><i class="fa fa-stack-overflow"></i></a>
+              <a href="https://github.com/cgoosey1"><i class="fa fa-github"></i></a>
+              <a href="http://uk.linkedin.com/pub/chris-goosey/4b/a98/4b9/"><i class="fa fa-linkedin-square"></i></a>
+              <a href="https://twitter.com/DaFlyinGoose"><i class="fa fa-twitter-square"></i></a>
+            </section>
 			</div>
 		</div>
 		@section('javascript')

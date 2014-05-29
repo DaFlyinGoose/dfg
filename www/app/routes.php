@@ -16,6 +16,29 @@ Route::get('/cheatsheets', function() {
 
     return View::make('site.cheatsheets', $data);
 });
+Route::post('/cheatsheets', function() {
+	$input = Input::all();
+	$validator = Validator::make(
+		$input,
+		array(
+			'url' => 'required',
+		)
+	);
+	
+	if ($validator->fails())
+	{
+		return Redirect::to('/#contact')->withErrors($validator);
+	}
+	else
+	{
+		Mail::queue('emails.cheatsheet', $input, function($message) {
+			$message->to('chris@dfg.gd', 'Chris Goosey')
+				->subject('DFG Cheat Sheet Suggestion');
+		});
+		
+		return Redirect::to('/cheatsheets#contact')->with('success', 'Cheat Sheet Submitted!');
+	}
+});
 
 Route::get('/', function()
 {

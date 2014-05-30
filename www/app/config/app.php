@@ -113,8 +113,8 @@ return array(
 		'Binarix\FoundationPagination\FoundationPaginationServiceProvider',
 		'Hugofirth\Mailchimp\MailchimpServiceProvider',
 		'Bogardo\Mailgun\MailgunServiceProvider',
-		'Mews\Captcha\CaptchaServiceProvider',
-		
+        'Msurguy\Honeypot\HoneypotServiceProvider',
+        
 		'Repositories\Email\EmailRepositoryServiceProvider',
 		'Services\Email\EmailServiceServiceProvider',
 	),

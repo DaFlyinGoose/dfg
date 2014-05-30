@@ -21,7 +21,9 @@ Route::post('/cheatsheets', function() {
 	$validator = Validator::make(
 		$input,
 		array(
-			'url' => 'required',
+			'url' => 'required|url',
+            'my_name'   => 'honeypot',
+            'my_time'   => 'required|honeytime:5'
 		)
 	);
 	
@@ -50,6 +52,10 @@ Route::get('/', function()
 	);
 });
 
+Route::get('/blog_articles/laravel-artisan-cheatsheet', function() {
+    return View::make('site.blog.artisan-cheatsheet');
+});
+
 Route::post('/', function() {
 	$input = Input::all();
 	$validator = Validator::make(
@@ -57,7 +63,8 @@ Route::post('/', function() {
 		array(
 			'email' => 'required|email', 
 			'text' => 'required',
-			'captcha' => 'required|captcha',
+            'my_name'   => 'honeypot',
+            'my_time'   => 'required|honeytime:5'
 		)
 	);
 	

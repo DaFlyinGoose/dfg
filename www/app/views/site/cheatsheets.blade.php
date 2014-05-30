@@ -85,6 +85,7 @@
                           </label>
                         </div>
                       </div>
+                    {{ Form::honeypot('my_name', 'my_time') }}
                     {{ Form::submit('Send', array('class' => 'success button')) }}
                     {{ Form::close() }}
                   </div>

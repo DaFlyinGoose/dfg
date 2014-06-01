@@ -21,8 +21,6 @@ $include-html-global-classes: false;
 /* page specific styles */
 #menuContainer {
     position: fixed;
-    width: 200px;
-    float: left;
     margin: 0 10px 0 10px;
 }
 #menuContainer div {
@@ -37,18 +35,16 @@ $include-html-global-classes: false;
     padding: .7rem 1rem;
     background-color: #008CBA;
     color: #fff;
-    width: 93%;
-    -webkit-transition: background-color 300ms ease-out;
-    transition: background-color 300ms ease-out;
-    -webkit-transition: width 300ms ease-out;
-    transition: width 300ms ease-out;
+    width: 63%;
+    -webkit-transition: width 300ms ease-out, background-color 300ms ease-out;
+    transition: width 300ms ease-out, background-color 300ms ease-out;
 }
 #menuContainer div:hover {
     background-color: #007295;
-    cursor:pointer;
+    cursor: pointer;
 }
 #menuContainer .active {
-    width: 100%;
+    width: 70%;
 }
 #cheatsheetContainer {
     width: 70%;

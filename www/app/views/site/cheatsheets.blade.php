@@ -11,9 +11,9 @@
 @section('content')
 <div class="container article wrapper">
     <div class="row wrapper__inner">
-        <div class="large-12 columns">
-            <section class='cheatsheetContainer'>
-                <div id='menuContainer'>
+        <div class="large-12 columns cheatsheetContainer">
+            <div class='row'>
+                <div class='small-3 column' id='menuContainer'>
                     @foreach ($cheatsheets as $sheet)
                         <div 
                             @if ($cheatsheets[0]['id'] == $sheet['id'])
@@ -24,7 +24,7 @@
                         id='{{ camel_case($sheet['name']) }}'>{{ $sheet['name'] }}</div>
                     @endforeach
                 </div>
-                <div id='cheatsheetContainer'>
+                <div class='small-8 column' id='cheatsheetContainer'>
                     @foreach ($cheatsheets as $sheet)
                         <h1 id='{{ camel_case($sheet['name']) }}Desc'>{{ $sheet['name'] }}</h1>
                         <p>{{ $sheet['description'] }}</p>
@@ -36,7 +36,7 @@
                         <hr>
                     @endforeach
                 </div>
-            </section>
+            </div>
             <br style='clear:both;'/>
             <section class="contact" id="contact">
                 <div class="row">

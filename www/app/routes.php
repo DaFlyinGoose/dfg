@@ -58,7 +58,7 @@ Route::post('/cheatsheets', function() {
 
         if ($validator->fails())
         {
-            return Redirect::to('/#contact')->withErrors($validator);
+            return Redirect::to('/cheatsheets#contact')->withErrors($validator);
         }
         else
         {

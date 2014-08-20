@@ -17,7 +17,7 @@ Route::get('/cheatsheets', function() {
     return View::make('site.cheatsheets', $data);
 });
 Route::post('/cheatsheets', function() {
-    if (Input::has('email'))
+    if (!Input::has('url'))
     {
         $input = Input::all();
         $validator = Validator::make(
@@ -44,7 +44,7 @@ Route::post('/cheatsheets', function() {
             return Redirect::to('/cheatsheets#contact')->with('success', 'Message Sent!');
         }
     }
-    elseif (Input::has('url'))
+    else
     {
         $input = Input::all();
         $validator = Validator::make(

@@ -50,7 +50,7 @@ Route::post('/cheatsheets', function() {
         $validator = Validator::make(
             $input,
             array(
-                'url' => 'required|url',
+                'url' => 'required',
                 'my_name'   => 'honeypot',
                 'my_time'   => 'required|honeytime:5'
             )

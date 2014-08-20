@@ -22,7 +22,8 @@
 			<aside class="left-off-canvas-menu">
 				<ul class="off-canvas-list">
 					<li><label class="first">Chris Goosey</label></li>
-					<li><a href="/blog">Blog</a></li>
+                    <li><a href="/cheatsheets">Cheat Sheets</a></li>
+                    <li><a href="/blog">Blog</a></li>
 					<li><a href="/#contact">Contact me</a></li>
 				</ul>
 			</aside>
@@ -45,6 +46,7 @@
 						</div>
 						<div class="medium-6 large-6 columns">
 							<ul class="inline-list right">
+                                <li><a href="/cheatsheets">Cheat Sheets</a></li>
 								<li><a href="/blog">Blog</a></li>
 								<li><a href="/#contact">Contact me</a></li>
 							</ul>

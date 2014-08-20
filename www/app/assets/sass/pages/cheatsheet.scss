@@ -19,11 +19,13 @@ $include-html-global-classes: false;
 @import "../../bower_components/foundation/scss/foundation/functions";
 
 /* page specific styles */
-#menuContainer {
+#menuContainer, #hiddenMenuContainer {
     position: fixed;
     margin: 0 10px 0 10px;
+    overflow: auto;
 }
 #menuContainer div {
+    max-width: 14em;
     font-weight: 400;
     font-family: Roboto Slab,Helvetica,Arial,Sans-serif;
     font-size: 14px;
@@ -32,25 +34,65 @@ $include-html-global-classes: false;
     display: inline-block;
     position: relative;
     border-bottom: 1px solid #fff;
-    padding: .7rem 1rem;
     background-color: #008CBA;
     color: #fff;
-    width: 63%;
-    -webkit-transition: width 300ms ease-out, background-color 300ms ease-out;
-    transition: width 300ms ease-out, background-color 300ms ease-out;
+    width: 93%;
+    -webkit-transition: max-width 300ms ease-out, width 300ms ease-out, background-color 300ms ease-out;
+    transition: max-width 300ms ease-out, width 300ms ease-out, background-color 300ms ease-out;
+}
+#menuContainer .fullTitle {
+  padding: .7rem 1rem;
 }
 #menuContainer div:hover {
     background-color: #007295;
     cursor: pointer;
 }
 #menuContainer .active {
-    width: 70%;
+    width: 100%;
+    max-width: 15em;
+}
+#hiddenMenuContainer div
+{
+  position: relative;
+  height: 100%;
+}
+#hiddenMenuContainer img
+{
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+}
+#hiddenMenuContainer aside
+ {
+   background-color: #fff;
+ }
+#hiddenMenuContainer ul
+{
+  list-style-type: none;
+  text-decoration: none;
+  margin: 0;
+}
+#hiddenMenuContainer li
+{
+  font-weight: 400;
+  font-family: Roboto Slab,Helvetica,Arial,Sans-serif;
+  font-size: 16px;
+  line-height: 26px;
+  white-space: nowrap;
+  display: inline-block;
+  position: relative;
+  border-bottom: 1px solid #00ADCB;
+  display: block;
+  padding-left: 10px;
+  background-color: #008CBA;
+  color: #fff;
+  width: 100%;
 }
 #cheatsheetContainer {
-    width: 70%;
-    float: left;
-    display: inline-block;
-    margin: 0 10px 0 240px;
+    //width: 70%;
+    //float: left;
+    //display: inline-block;
+    //margin: 0 10px 0 240px;
 }
 button {
     padding: .5rem 1.25rem;
@@ -62,4 +104,10 @@ button {
 }
 .contact {
     padding: 20px 0 20px 0;
+}
+.lightbox
+{
+  background-color: #fff;
+  padding: 20px 40px 20px 40px;
+  border-radius: 5px;
 }

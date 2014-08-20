@@ -84,30 +84,7 @@
         <div class="row">
           <div class="large-6 columns">
             {{ Form::open() }}
-              <div class="row">
-                <div class="large-12 columns">
-                  <label>
-					{{ Form::text('name', Session::get('name', ''), array('placeholder' => 'name')) }}
-                  </label>
-                </div>
-              </div>
-              <div class="row">
-                <div class="large-12 columns">
-                  <label>
-					{{ Form::text('email', Session::get('email', ''), array('placeholder' => 'email')) }}
-                  </label>
-                </div>
-              </div>
-              <div class="row">
-                <div class="large-12 columns">
-                  <label>
-					{{ Form::textarea('text', Session::get('text', ''), array('placeholder' => 'message', 'rows' => '12x§')) }}
-                  </label>
-                </div>
-              </div>
-            {{ Form::honeypot('my_name', 'my_time') }}
-			{{ Form::submit('Send', array('class' => 'success button')) }}
-            {{ Form::close() }}
+            @include('includes.contact')
           </div>
           <div class="large-6 columns">
 			  <p>I built this blog to reach out to the community, I'm always happy to hear from other developers.</p> 

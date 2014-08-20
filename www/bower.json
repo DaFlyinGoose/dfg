@@ -16,9 +16,10 @@
   ],
   "dependencies": {
     "jquery": "~2.1.0",
-    "foundation": "~5.1.1",
+    "foundation": "~5.3.1",
     "normalize-css": "~3.0.0",
     "highlight": "~7.0.1",
-    "jquery-waypoints": "~2.0.5"
+    "jquery-waypoints": "~2.0.5",
+    "custombox": "~1.1.3"
   }
 }

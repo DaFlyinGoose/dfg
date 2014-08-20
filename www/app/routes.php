@@ -17,29 +17,59 @@ Route::get('/cheatsheets', function() {
     return View::make('site.cheatsheets', $data);
 });
 Route::post('/cheatsheets', function() {
-	$input = Input::all();
-	$validator = Validator::make(
-		$input,
-		array(
-			'url' => 'required|url',
-            'my_name'   => 'honeypot',
-            'my_time'   => 'required|honeytime:5'
-		)
-	);
-	
-	if ($validator->fails())
-	{
-		return Redirect::to('/#contact')->withErrors($validator);
-	}
-	else
-	{
-		Mail::queue('emails.cheatsheet', $input, function($message) {
-			$message->to('chris@dfg.gd', 'Chris Goosey')
-				->subject('DFG Cheat Sheet Suggestion');
-		});
-		
-		return Redirect::to('/cheatsheets#contact')->with('success', 'Cheat Sheet Submitted!');
-	}
+    if (Input::has('email'))
+    {
+        $input = Input::all();
+        $validator = Validator::make(
+            $input,
+            array(
+                'email' => 'required|email',
+                'text' => 'required',
+                'my_name'   => 'honeypot',
+                'my_time'   => 'required|honeytime:5'
+            )
+        );
+
+        if ($validator->fails())
+        {
+            return Redirect::to('/cheatsheets#contact')->withErrors($validator);
+        }
+        else
+        {
+            Mail::queue('emails.contact', $input, function($message) {
+                $message->to('chris@dfg.gd', 'Chris Goosey')
+                    ->subject('DFG Contact Email');
+            });
+
+            return Redirect::to('/cheatsheets#contact')->with('success', 'Message Sent!');
+        }
+    }
+    elseif (Input::has('url'))
+    {
+        $input = Input::all();
+        $validator = Validator::make(
+            $input,
+            array(
+                'url' => 'required|url',
+                'my_name'   => 'honeypot',
+                'my_time'   => 'required|honeytime:5'
+            )
+        );
+
+        if ($validator->fails())
+        {
+            return Redirect::to('/#contact')->withErrors($validator);
+        }
+        else
+        {
+            Mail::queue('emails.cheatsheet', $input, function($message) {
+                $message->to('chris@dfg.gd', 'Chris Goosey')
+                    ->subject('DFG Cheat Sheet Suggestion');
+            });
+
+            return Redirect::to('/cheatsheets#contact')->with('success', 'Cheat Sheet Submitted!');
+        }
+    }
 });
 
 Route::get('/', function()

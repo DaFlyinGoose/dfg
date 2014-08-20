@@ -1,8 +1,7 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
-        "This file is @generated automatically"
+        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
     "hash": "ff1a1fcbe74ba30aa17a9446ef194dc6",
     "packages": [
@@ -276,7 +275,7 @@
                 {
                     "name": "Johannes Schmitt",
                     "email": "schmittjoh@gmail.com",
-                    "homepage": "http://jmsyst.com",
+                    "homepage": "https://github.com/schmittjoh",
                     "role": "Developer of wrapped JMSSerializerBundle"
                 }
             ],
@@ -742,7 +741,7 @@
             "authors": [
                 {
                     "name": "Anthony Ferrara",
-                    "email": "ircmaxell@php.net",
+                    "email": "ircmaxell@ircmaxell.com",
                     "homepage": "http://blog.ircmaxell.com"
                 }
             ],
@@ -1331,12 +1330,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpseclib/phpseclib.git",
-                "reference": "7696cbf8262684b438a3631e166cf0a949544e3f"
+                "reference": "cb8f991752e583f0e0c505ee0528da2af4f26045"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpseclib/phpseclib/zipball/7696cbf8262684b438a3631e166cf0a949544e3f",
-                "reference": "7696cbf8262684b438a3631e166cf0a949544e3f",
+                "url": "https://api.github.com/repos/phpseclib/phpseclib/zipball/cb8f991752e583f0e0c505ee0528da2af4f26045",
+                "reference": "cb8f991752e583f0e0c505ee0528da2af4f26045",
                 "shasum": ""
             },
             "require": {
@@ -1421,7 +1420,7 @@
                 "x.509",
                 "x509"
             ],
-            "time": "2014-08-19 20:25:02"
+            "time": "2014-08-12 09:30:21"
         },
         {
             "name": "predis/predis",
@@ -1679,12 +1678,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Console.git",
-                "reference": "6cdbe19f8f9025a84ccc45c3870e388e424bea5c"
+                "reference": "6fa9b330e07d7b92694b9a43ae68fea8e97f3f30"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Console/zipball/6cdbe19f8f9025a84ccc45c3870e388e424bea5c",
-                "reference": "6cdbe19f8f9025a84ccc45c3870e388e424bea5c",
+                "url": "https://api.github.com/repos/symfony/Console/zipball/6fa9b330e07d7b92694b9a43ae68fea8e97f3f30",
+                "reference": "6fa9b330e07d7b92694b9a43ae68fea8e97f3f30",
                 "shasum": ""
             },
             "require": {
@@ -1723,7 +1722,7 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "http://symfony.com",
-            "time": "2014-08-14 14:51:32"
+            "time": "2014-08-04 10:16:36"
         },
         {
             "name": "symfony/css-selector",
@@ -2001,12 +2000,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Finder.git",
-                "reference": "88a5de231a83cc5c2e213328a8036b188ff14cd4"
+                "reference": "d2bbfeba8bf4b699218c710f7ea049cd8e045585"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Finder/zipball/88a5de231a83cc5c2e213328a8036b188ff14cd4",
-                "reference": "88a5de231a83cc5c2e213328a8036b188ff14cd4",
+                "url": "https://api.github.com/repos/symfony/Finder/zipball/d2bbfeba8bf4b699218c710f7ea049cd8e045585",
+                "reference": "d2bbfeba8bf4b699218c710f7ea049cd8e045585",
                 "shasum": ""
             },
             "require": {
@@ -2039,7 +2038,7 @@
             ],
             "description": "Symfony Finder Component",
             "homepage": "http://symfony.com",
-            "time": "2014-08-14 14:51:32"
+            "time": "2014-08-08 15:50:44"
         },
         {
             "name": "symfony/http-foundation",
@@ -2048,12 +2047,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/HttpFoundation.git",
-                "reference": "a25a309e046871c0bb092124160d86e2adfd6262"
+                "reference": "de224a2599a6dc95793007b67e34607f4e8ff361"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/HttpFoundation/zipball/a25a309e046871c0bb092124160d86e2adfd6262",
-                "reference": "a25a309e046871c0bb092124160d86e2adfd6262",
+                "url": "https://api.github.com/repos/symfony/HttpFoundation/zipball/de224a2599a6dc95793007b67e34607f4e8ff361",
+                "reference": "de224a2599a6dc95793007b67e34607f4e8ff361",
                 "shasum": ""
             },
             "require": {
@@ -2092,7 +2091,7 @@
             ],
             "description": "Symfony HttpFoundation Component",
             "homepage": "http://symfony.com",
-            "time": "2014-08-18 09:01:24"
+            "time": "2014-08-04 10:16:36"
         },
         {
             "name": "symfony/http-kernel",
@@ -2285,12 +2284,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/security-core.git",
-                "reference": "72e976aedd69d7a6f04e95b7df76e03109204ed7"
+                "reference": "35c5e3a5197ec75554aef169cf1b52d423506d3c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/security-core/zipball/72e976aedd69d7a6f04e95b7df76e03109204ed7",
-                "reference": "72e976aedd69d7a6f04e95b7df76e03109204ed7",
+                "url": "https://api.github.com/repos/symfony/security-core/zipball/35c5e3a5197ec75554aef169cf1b52d423506d3c",
+                "reference": "35c5e3a5197ec75554aef169cf1b52d423506d3c",
                 "shasum": ""
             },
             "require": {
@@ -2338,7 +2337,7 @@
             ],
             "description": "Symfony Security Component - Core Library",
             "homepage": "http://symfony.com",
-            "time": "2014-08-14 14:56:25"
+            "time": "2014-08-04 10:16:36"
         },
         {
             "name": "symfony/translation",
@@ -2472,7 +2471,7 @@
             ],
             "authors": [
                 {
-                    "name": "thujohn",
+                    "name": "Jonathan Thuau",
                     "email": "jonathan.thuau@gmail.com"
                 }
             ],
@@ -2546,12 +2545,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/barryvdh/laravel-debugbar.git",
-                "reference": "f088d868340b829a52a776aedd040e772825fedc"
+                "reference": "6f61f62a96ee51f255a00d8c5868bc3c49e86924"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/barryvdh/laravel-debugbar/zipball/f088d868340b829a52a776aedd040e772825fedc",
-                "reference": "f088d868340b829a52a776aedd040e772825fedc",
+                "url": "https://api.github.com/repos/barryvdh/laravel-debugbar/zipball/6f61f62a96ee51f255a00d8c5868bc3c49e86924",
+                "reference": "6f61f62a96ee51f255a00d8c5868bc3c49e86924",
                 "shasum": ""
             },
             "require": {
@@ -2589,7 +2588,7 @@
                 "profiler",
                 "webprofiler"
             ],
-            "time": "2014-08-15 11:57:42"
+            "time": "2014-08-13 10:19:23"
         },
         {
             "name": "maximebf/debugbar",
@@ -2766,7 +2765,6 @@
         "bogardo/mailgun": 20,
         "msurguy/honeypot": 20
     },
-    "prefer-stable": false,
     "platform": [],
     "platform-dev": []
 }

@@ -296,12 +296,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/FbF/Laravel-Blog.git",
-                "reference": "a375fb772badc0842c1d2360638367de628a19e3"
+                "reference": "a013e3e902c2c9707ae186e99e2b79b0f06d72b5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FbF/Laravel-Blog/zipball/a375fb772badc0842c1d2360638367de628a19e3",
-                "reference": "a375fb772badc0842c1d2360638367de628a19e3",
+                "url": "https://api.github.com/repos/FbF/Laravel-Blog/zipball/a013e3e902c2c9707ae186e99e2b79b0f06d72b5",
+                "reference": "a013e3e902c2c9707ae186e99e2b79b0f06d72b5",
                 "shasum": ""
             },
             "require": {
@@ -338,7 +338,7 @@
                 "blog",
                 "laravel"
             ],
-            "time": "2014-08-12 18:27:46"
+            "time": "2014-08-20 10:21:34"
         },
         {
             "name": "filp/whoops",
@@ -1331,12 +1331,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpseclib/phpseclib.git",
-                "reference": "cb8f991752e583f0e0c505ee0528da2af4f26045"
+                "reference": "7696cbf8262684b438a3631e166cf0a949544e3f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpseclib/phpseclib/zipball/cb8f991752e583f0e0c505ee0528da2af4f26045",
-                "reference": "cb8f991752e583f0e0c505ee0528da2af4f26045",
+                "url": "https://api.github.com/repos/phpseclib/phpseclib/zipball/7696cbf8262684b438a3631e166cf0a949544e3f",
+                "reference": "7696cbf8262684b438a3631e166cf0a949544e3f",
                 "shasum": ""
             },
             "require": {
@@ -1421,7 +1421,7 @@
                 "x.509",
                 "x509"
             ],
-            "time": "2014-08-12 09:30:21"
+            "time": "2014-08-19 20:25:02"
         },
         {
             "name": "predis/predis",
@@ -1679,12 +1679,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Console.git",
-                "reference": "6fa9b330e07d7b92694b9a43ae68fea8e97f3f30"
+                "reference": "6cdbe19f8f9025a84ccc45c3870e388e424bea5c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Console/zipball/6fa9b330e07d7b92694b9a43ae68fea8e97f3f30",
-                "reference": "6fa9b330e07d7b92694b9a43ae68fea8e97f3f30",
+                "url": "https://api.github.com/repos/symfony/Console/zipball/6cdbe19f8f9025a84ccc45c3870e388e424bea5c",
+                "reference": "6cdbe19f8f9025a84ccc45c3870e388e424bea5c",
                 "shasum": ""
             },
             "require": {
@@ -1723,7 +1723,7 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "http://symfony.com",
-            "time": "2014-08-04 10:16:36"
+            "time": "2014-08-14 14:51:32"
         },
         {
             "name": "symfony/css-selector",
@@ -2001,12 +2001,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Finder.git",
-                "reference": "d2bbfeba8bf4b699218c710f7ea049cd8e045585"
+                "reference": "88a5de231a83cc5c2e213328a8036b188ff14cd4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Finder/zipball/d2bbfeba8bf4b699218c710f7ea049cd8e045585",
-                "reference": "d2bbfeba8bf4b699218c710f7ea049cd8e045585",
+                "url": "https://api.github.com/repos/symfony/Finder/zipball/88a5de231a83cc5c2e213328a8036b188ff14cd4",
+                "reference": "88a5de231a83cc5c2e213328a8036b188ff14cd4",
                 "shasum": ""
             },
             "require": {
@@ -2039,7 +2039,7 @@
             ],
             "description": "Symfony Finder Component",
             "homepage": "http://symfony.com",
-            "time": "2014-08-08 15:50:44"
+            "time": "2014-08-14 14:51:32"
         },
         {
             "name": "symfony/http-foundation",
@@ -2048,12 +2048,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/HttpFoundation.git",
-                "reference": "de224a2599a6dc95793007b67e34607f4e8ff361"
+                "reference": "a25a309e046871c0bb092124160d86e2adfd6262"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/HttpFoundation/zipball/de224a2599a6dc95793007b67e34607f4e8ff361",
-                "reference": "de224a2599a6dc95793007b67e34607f4e8ff361",
+                "url": "https://api.github.com/repos/symfony/HttpFoundation/zipball/a25a309e046871c0bb092124160d86e2adfd6262",
+                "reference": "a25a309e046871c0bb092124160d86e2adfd6262",
                 "shasum": ""
             },
             "require": {
@@ -2092,7 +2092,7 @@
             ],
             "description": "Symfony HttpFoundation Component",
             "homepage": "http://symfony.com",
-            "time": "2014-08-04 10:16:36"
+            "time": "2014-08-18 09:01:24"
         },
         {
             "name": "symfony/http-kernel",
@@ -2285,12 +2285,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/security-core.git",
-                "reference": "35c5e3a5197ec75554aef169cf1b52d423506d3c"
+                "reference": "72e976aedd69d7a6f04e95b7df76e03109204ed7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/security-core/zipball/35c5e3a5197ec75554aef169cf1b52d423506d3c",
-                "reference": "35c5e3a5197ec75554aef169cf1b52d423506d3c",
+                "url": "https://api.github.com/repos/symfony/security-core/zipball/72e976aedd69d7a6f04e95b7df76e03109204ed7",
+                "reference": "72e976aedd69d7a6f04e95b7df76e03109204ed7",
                 "shasum": ""
             },
             "require": {
@@ -2338,7 +2338,7 @@
             ],
             "description": "Symfony Security Component - Core Library",
             "homepage": "http://symfony.com",
-            "time": "2014-08-04 10:16:36"
+            "time": "2014-08-14 14:56:25"
         },
         {
             "name": "symfony/translation",
@@ -2546,12 +2546,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/barryvdh/laravel-debugbar.git",
-                "reference": "6f61f62a96ee51f255a00d8c5868bc3c49e86924"
+                "reference": "f088d868340b829a52a776aedd040e772825fedc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/barryvdh/laravel-debugbar/zipball/6f61f62a96ee51f255a00d8c5868bc3c49e86924",
-                "reference": "6f61f62a96ee51f255a00d8c5868bc3c49e86924",
+                "url": "https://api.github.com/repos/barryvdh/laravel-debugbar/zipball/f088d868340b829a52a776aedd040e772825fedc",
+                "reference": "f088d868340b829a52a776aedd040e772825fedc",
                 "shasum": ""
             },
             "require": {
@@ -2589,7 +2589,7 @@
                 "profiler",
                 "webprofiler"
             ],
-            "time": "2014-08-13 10:19:23"
+            "time": "2014-08-15 11:57:42"
         },
         {
             "name": "maximebf/debugbar",

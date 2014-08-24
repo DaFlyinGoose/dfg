@@ -19,7 +19,7 @@
 			<div class="inner-wrap">
 
 			<!-- MOBILE NAV -->
-			<aside class="left-off-canvas-menu">
+			<aside class="left-off-canvas-menu hide-for-medium-up">
 				<ul class="off-canvas-list">
 					<li><label class="first">Chris Goosey</label></li>
                     <li><a href="/cheatsheets">Cheat Sheets</a></li>

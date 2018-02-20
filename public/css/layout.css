@@ -1,0 +1,39 @@
+/**
+ * Site settings
+ */
+/* colours */
+/* fonts */
+/* font groups */
+/* layout specific styles */
+body {
+  background: white;
+  font-family: Roboto Slab,Helvetica,Arial,Sans-serif; }
+
+@media only screen and (min-width: 40.063em) {
+  .inner-wrap {
+    padding-top: 90px; } }
+
+.top-bar--goosey {
+  padding: 20px 0;
+  background: #252525; }
+  .top-bar--goosey h1 {
+    font-size: 1.875rem;
+    font-weight: 100; }
+  .top-bar--goosey a {
+    color: #fff; }
+  .top-bar--goosey ul {
+    margin-top: 10px; }
+    .top-bar--goosey ul li a {
+      font-weight: 100;
+      text-transform: lowercase; }
+
+.social {
+  background: #252525;
+  /* TODO(del) */
+  text-align: center;
+  padding: 20px 0; }
+  .social a {
+    font-size: 5rem;
+    display: inline-block;
+    padding: 0 40px;
+    color: white; }
